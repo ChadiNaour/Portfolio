@@ -110,21 +110,21 @@ a {
 }
 
 @font-face {
-  font-family: 'reload';
+  font-family: 'reload1';
   font-style: normal;
   font-weight: 400;
   src: url('../public/FirstFont/ReloadAlt-Regular.ttf') format('truetype');
 }
 
 @font-face {
-  font-family: 'reload';
+  font-family: 'reload2';
   font-style: bold;
   font-weight: 400;
   src: url('../public/FirstFont/Reload-Bold.ttf') format('truetype');
 }
 
 @font-face {
-  font-family: 'reload';
+  font-family: 'reload3';
   font-style: light;
   font-weight: 400;
   src: url('../public/FirstFont/Reload-Light.ttf') format('truetype');

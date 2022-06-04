@@ -6,14 +6,13 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'gold': '#c98e4a',
+        'graye': 'rgba(255,255,255,.4);',
         'darkgold' : '#ba7923',
       },
       fontFamily: {
-        'montserrat': ['Montserrat'],
-        'abhaya-libre': ['Abhaya Libre'],
-        'alegraya-sans': ['Alegreya Sans'],
-        'montaga': ['Montaga serif'],
+        'reloadNormal': ['reload1'],
+        'reloadBold': ['reload2'],
+        'reloadLight': ['reload1,arial narrow,Arial,Helvetica,sans-serif'],
       },
     }
   },
