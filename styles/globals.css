@@ -1,3 +1,6 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 html,
 body {
   padding: 0;
@@ -6,7 +9,7 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
-h1 {
+.blackMirror {
   position: relative;
   font-family: 'Montserrat', Arial, sans-serif;
   font-size: calc(20px + 5vw);
@@ -21,7 +24,7 @@ h1 {
   animation: shake 2.5s linear forwards;
 }
 
-h1 span {
+.blackMirror span {
   position: absolute;
   top: 0;
   left: 0;
@@ -30,21 +33,21 @@ h1 span {
           clip-path: polygon(10% 0%, 44% 0%, 70% 100%, 55% 100%);
 }
 
-h1::before,
-h1::after {
+.blackMirror::before,
+.blackMirror::after {
   content: attr(data-text);
   position: absolute;
   top: 0;
   left: 0;
 }
 
-h1::before {
+.blackMirror::before {
   animation: crack1 2.5s linear forwards;
   -webkit-clip-path: polygon(0% 0%, 10% 0%, 55% 100%, 0% 100%);
           clip-path: polygon(0% 0%, 10% 0%, 55% 100%, 0% 100%);
 }
 
-h1::after {
+.blackMirror::after {
   animation: crack2 2.5s linear forwards;
   -webkit-clip-path: polygon(44% 0%, 100% 0%, 100% 100%, 70% 100%);
           clip-path: polygon(44% 0%, 100% 0%, 100% 100%, 70% 100%);
