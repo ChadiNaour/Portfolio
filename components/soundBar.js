@@ -9,7 +9,7 @@ cursor:pointer;
 position:fixed;
 // left:8rem;
 // top:3rem;
-z-index:10;
+z-index:100;
 &>*:nth-child(1){
     animation-delay: 0.2s;
 }
@@ -29,13 +29,13 @@ z-index:10;
 
 const play = keyframes`
 0%{
-    transform:scaleY(1);
+    transform:scaleY(0.8);
 }
 50%{
-    transform:scaleY(2);
+    transform:scaleY(1.3);
 }
 100%{
-    transform:scaleY(1);
+    transform:scaleY(0.8);
 }
 `
 const Line = styled.span`
