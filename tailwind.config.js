@@ -12,7 +12,7 @@ module.exports = {
       fontFamily: {
         'reloadNormal': ['reload1'],
         'reloadBold': ['reload2'],
-        'reloadLight': ['reload1,arial narrow,Arial,Helvetica,sans-serif'],
+        'reloadLight': ['reload3,arial narrow,Arial,Helvetica,sans-serif'],
       },
     }
   },

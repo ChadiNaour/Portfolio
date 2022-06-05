@@ -11,13 +11,13 @@ body {
 
 .blackMirror {
   position: relative;
-  font-family: 'Montserrat', Arial, sans-serif;
+  font-family: 'reload1', Arial, sans-serif;
   font-size: calc(20px + 5vw);
   font-weight: 700;
   color: #fff;
   letter-spacing: 0.02em;
   text-transform: uppercase;
-  text-shadow: 0 0 0.15em #1da9cc;
+  text-shadow: 0 0 0.15em rgba(255,255,255,.4);
   user-select: none;
   white-space: nowrap;
   filter: blur(0.007em);
@@ -125,7 +125,7 @@ a {
 
 @font-face {
   font-family: 'reload3';
-  font-style: light;
+  /* font-style: light; */
   font-weight: 400;
   src: url('../public/FirstFont/Reload-Light.ttf') format('truetype');
 }
