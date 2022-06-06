@@ -11,6 +11,25 @@
   align-items: center;
 }
 
+.circle{
+  cx: 50%;
+  cy: 50%;
+  r: 30px;
+  stroke: rgba(255,255,255,.35);
+  stroke-width: 0.5px;
+  transform: translateZ(0);
+  fill: none;
+  animation: circle-pulse 6s infinite linear;
+  animation-duration: 6s;
+  animation-timing-function: linear;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  animation-play-state: running;
+  animation-name: circle-pulse;
+}
+
 .footer {
   position:fixed;
   bottom:0;
