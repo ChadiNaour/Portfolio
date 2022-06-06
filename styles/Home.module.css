@@ -1,33 +1,23 @@
 .container {
   /* background-color: red; */
-}
-.main {
-  background-color: black;
   min-height: 100vh;
+  max-width: 100vw;
   flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
-
-.circle{
-  cx: 50%;
-  cy: 50%;
-  r: 30px;
-  stroke: rgba(255,255,255,.35);
-  stroke-width: 0.5px;
-  transform: translateZ(0);
-  fill: none;
-  animation: circle-pulse 6s infinite linear;
-  animation-duration: 6s;
-  animation-timing-function: linear;
-  animation-delay: 0s;
-  animation-iteration-count: infinite;
-  animation-direction: normal;
-  animation-fill-mode: none;
-  animation-play-state: running;
-  animation-name: circle-pulse;
+.main {
+  position: relative;
+  background-color: black;
+  width: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .footer {

@@ -34,7 +34,6 @@ const play = keyframes`
 }
 `
 const Line = styled.span`
-// position : fixed;
 bottom:0;
 background: white;
 border: 1px solid white;
