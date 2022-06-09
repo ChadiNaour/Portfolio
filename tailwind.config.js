@@ -7,7 +7,7 @@ module.exports = {
     extend: {
       colors: {
         'graye': 'rgba(255,255,255,.4);',
-        'darkgold' : '#ba7923',
+        'dark' : '#0a0c11',
       },
       fontFamily: {
         'reloadNormal': ['reload1'],

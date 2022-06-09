@@ -9,7 +9,7 @@ cursor:pointer;
 position:fixed;
 // left:8rem;
 // top:3rem;
-z-index:100;
+// z-index:100;
 &>*:nth-child(1){
     animation-delay: 0.2s;
 }
@@ -49,7 +49,7 @@ margin:0 0.1rem
 `
 
 const SoundBar = () => {
-
+    // const [click, setClick] = useState(false);
     const ref = useRef(null);
     const [click, setClick] = useState(false);
 

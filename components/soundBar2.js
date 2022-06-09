@@ -39,7 +39,7 @@ background: white;
 border: 1px solid white;
 animation: ${play} 1s ease infinite;
 animation-play-state:  "running";
-height: 1.5rem;
+height: 1.2rem;
 width: 4px;
 margin:0 0.1rem
 `
