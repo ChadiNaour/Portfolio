@@ -4,9 +4,14 @@
 html,
 body {
   padding: 0;
+  background-color: #0a0c11;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+body::-webkit-scrollbar {
+  display: none;
 }
 
 .blackMirror {
@@ -128,4 +133,25 @@ a {
   /* font-style: light; */
   font-weight: 400;
   src: url('../public/FirstFont/Reload-Light.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'cinetype';
+  font-style: bold;
+  font-weight: 400;
+  src: url('../public/GT-Cinetype-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'uni-sans';
+  font-style: bold;
+  font-weight: 400;
+  src: url('../public/uni-sans/Uni\ Sans\ Heavy.otf') format('truetype');
+}
+/* TIMMONS NY */
+@font-face {
+  font-family: 'TIMMONS NY';
+  font-style: bold;
+  font-weight: 400;
+  src: url('../public/TIMMONSNY-Regular/TIMMONSNY-Regular.ttf') format('truetype');
 }
