@@ -67,7 +67,7 @@ const AnimatedText = (props) => {
                   key={index}
                 >
                   <motion.span
-                    style={{ display: "inline-block" }}
+                    style={{ display: "inline-block" , userSelect: "none" }}
                     variants={item}
                     className=' font-cinetype py-1 text-2xl xs:text-2xl  md:text-4xl lg:text-5xl xl:text-6xl z-10'
                   >

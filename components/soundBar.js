@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react'
 import styled, { keyframes } from 'styled-components'
 
-import music from "./test.mp3"
+import music from "../public/music.mp3"
 
 const Box = styled.div`
 display:flex;
@@ -49,9 +49,8 @@ margin:0 0.1rem
 `
 
 const SoundBar = () => {
-    // const [click, setClick] = useState(false);
-    const ref = useRef(null);
     const [click, setClick] = useState(false);
+    const ref = useRef(null);
 
     const handleClick = () => {
         setClick(!click);
