@@ -1,4 +1,8 @@
+const path = require('path')
 module.exports = {
+  sassOptions: {
+    includePaths: [path.join(__dirname, 'styles')],
+  },
   webpack(config, options) {
     const { isServer } = options;
     config.module.rules.push({

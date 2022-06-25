@@ -1,0 +1,34 @@
+.Jutton {
+          background: white;
+          transition: all 0.5s cubic-bezier(0.420, 0.000, 0.580, 1.000);
+
+          &:before,
+          &:after {
+                    top: 0;
+                    width: 0;
+                    height: 100%;
+                    mix-blend-mode: overlay;
+                    transition: all 0.5s cubic-bezier(0.420, 0.000, 0.580, 1.000);
+          }
+
+          &:before {
+                    left: 0;
+                    width: 0;
+                    background: red;
+          }
+
+          &:after {
+                    left: 100%;
+                    width: 0;
+                    background: green;
+          }
+
+          &:hover:before {
+                    width: 100%;
+          }
+
+          &:hover:after {
+                    width: 100%;
+                    left: 0;
+          }
+}
