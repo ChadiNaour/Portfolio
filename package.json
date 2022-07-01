@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@ap.cx/react-fullpage": "^0.2.0",
+    "@headlessui/react": "^1.6.5",
     "css-loader": "^6.7.1",
     "file-loader": "^6.2.0",
     "framer-motion": "^6.3.10",

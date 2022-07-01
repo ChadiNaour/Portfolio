@@ -28,7 +28,7 @@ const Circle = styled.div`
       opacity: .6;
     }
     to {
-      transform: scale(6.5, 6.5);
+      transform: scale(7.5, 7.5);
       border: 1px solid rgba(255,255,255,.35);
       opacity: 0;
     }
