@@ -7,6 +7,7 @@ const Box = styled.div`
 display:flex;
 cursor:pointer;
 position:fixed;
+// background-color: red;
 // left:8rem;
 // top:3rem;
 // z-index:100;
@@ -43,9 +44,9 @@ background: white;
 border: 1px solid white;
 animation:${play} 1s ease infinite;
 animation-play-state: ${props => props.click ? "running" : "paused"};
-height: 1.5rem;
+height: 1.8rem;
 width: 4px;
-margin:0 0.1rem
+margin:0 0.14rem
 `
 
 const SoundBar = () => {

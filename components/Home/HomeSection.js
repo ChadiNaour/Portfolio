@@ -49,23 +49,23 @@ const HomeSection = ({resultRef}) => {
                 }
 
     return (
-          <section className="h-screen relative flex z-10  w-full flex flex-col justify-center items-center overflow-hidden bg-dark">
+          <section className="h-full relative flex z-10  w-full flex flex-col justify-center items-center overflow-hidden bg-dark">
           <motion.div initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{
                   opacity: { ease: "linear" },
                   delay: 3,
                   duration: 1
-              }} className="absolute  flex justify-center items-end   top-0 left-0 ml-6 md:ml-14 h-1/4 3xl:h-1/4">
-              <div className='hidden sm:block absolute font-reloadLight  text-white text-lg  md:text-2xl pl-6 md:pl-10 z-10 pt-4 -rotate-90' style={{ userSelect: "none" }}>home</div>
+              }} className="absolute  flex justify-center items-end   top-0 left-0 ml-6 md:ml-14 h-1/4 3xl:h-1/5">
+              <div className='hidden  sm:block absolute font-reloadLight  text-white text-lg  md:text-xl pl-6 md:pl-10 z-10 pt-4 -rotate-90' style={{ userSelect: "none" }}>home</div>
           </motion.div>
           <motion.div initial={{ height: 0 }}
-              animate={{ height: "60%" }}
+              animate={{ height: "65%" }}
               transition={{
                   opacity: { ease: "linear" },
                   delay: 3,
                   duration: 1
-              }} className="hidden sm:block absolute z-10 top-1/4 3xl:top-1/4  h-1/2 left-0  w-10  bottom-10 ml-7 md:ml-14 border-l-2 border-white">
+              }} className="hidden sm:block  absolute z-10 top-1/4 3xl:top-[20%] left-0  w-10  bottom-10 ml-7 md:ml-14 border-l-2 border-white">
           </motion.div>
 
           <motion.div
@@ -86,12 +86,12 @@ const HomeSection = ({resultRef}) => {
                   duration: 2,
                   userSelect: "none",
               }} className=" text-4xl md:text-5xl lg:text-7xl  mt-4  z-10 select-none" >✌️</motion.div>
-          <div className='hidden sm:block absolute z-0 mx-auto p-0 font-timmons md:text-6xl'
+          <div className='hidden sm:block absolute z-0 mx-auto p-0 font-timmons md:text-3xl'
               style={{
                   fontSize: "calc(var(--vh, 1vh) * 95)",
                   color: "#181818",
                   left: "50%",
-                  position: "fixed",
+                  position: "absolute",
                   top: "50%",
                   transform: "translate(-50%, -50%)",
                   transition: "0.5s opacity",
@@ -104,7 +104,7 @@ const HomeSection = ({resultRef}) => {
                   fontSize: "calc(var(--vh, 1vh) * 95)",
                   color: "#181818",
                   left: "50%",
-                  position: "fixed",
+                  position: "absolute",
                   top: "50%",
                   transform: "translate(-50%, -50%)",
                   transition: "0.5s opacity",
@@ -112,7 +112,7 @@ const HomeSection = ({resultRef}) => {
                   userSelect: "none",
               }}
           >HI</div>
-          <div className="absolute pb-8 pt-2 flex justify-center items-center left-0 bottom-0 w-full text-xl bg-dark select-none" >
+          <div className="absolute  pb-8 pt-2 flex justify-center items-center left-0 bottom-0 w-full text-xl bg-dark select-none" >
               <RoundedButton onClick={() => scrollToSection()} whileHover={{
                   scale: 1.2,
                   backgroundColor: "white",

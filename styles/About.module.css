@@ -1,69 +1,134 @@
 .btn {
-          position: relative;
-          background: white;
-          height: 70px;
-          width: 200px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          text-align: center;
+            position: relative;
+            background: white;
+            height: 3.5em;
+            width: 11em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
 }
 
 .arrow {
-          width: 21px;
-          width: 21px;
-          margin-left: 20px;
-          margin-bottom: 3px;
-          fill: #0a0c11;
+            width: 1.2rem;
+            width: 1.2rem;
+            margin-left: 1rem;
+            margin-bottom: 3px;
+            fill: #0a0c11;
 }
 
 .btn.btnCircle::before {
-          content: '';
-          position: absolute;
-          background-color: white;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          text-align: center;
-          width: 0px;
-          height: 0px;
-          z-index: -1;
-          border-radius: 50%;
-          transition: all 500ms ease-in-out;
-          transform: scale(0);
+            content: '';
+            position: absolute;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            width: 0px;
+            height: 0px;
+            z-index: -1;
+            border-radius: 50%;
+            transition: all 500ms ease-in-out;
+            transform: scale(0);
 }
 
-.btn.btnCircle:hover::before,
-.btn.btnCircle:focus::before {
-          transform: scale(1.1);
-          transition: transform 500ms ease-in-out;
-          background-color: #0a0c11;
-          width: 300px;
-          height: 300px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          text-align: center;
+.btn.btnCircle:hover::before {
+            transform: scale(1.1);
+            transition: transform 500ms ease-in-out;
+            background-color: #0a0c11;
+            width: 300px;
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
 }
 
 .btn.btnCircle:hover .arrow {
-          display: none;
-
-}
-.btn.btnCircle:focus .arrow {
-          display: none;
+            display: none;
 
 }
 
 .btn.btnCircle {
-          z-index: 1;
-          overflow: hidden;
-          background-color: white;
-          border: 2px solid white;
-          transition: color 500ms ease-in-out;
+            z-index: 1;
+            overflow: hidden;
+            background-color: white;
+            border: 1px solid white;
+            transition: color 500ms ease-in-out;
 }
 
-.btn.btnCircle:hover,
-.btn.btnCircle:focus {
-          color: white;
+.btn.btnCircle:hover {
+            color: white;
+}
+
+
+/* sijgbshyifcbf */
+
+.btn2 {
+            position: relative;
+            background: transparent;
+            border: 1px solid white;
+            color: white;
+            stroke-width: 2px;
+            height: 3.5em;
+            width: 14em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            overflow: hidden;
+}
+
+.arrow2 {
+            width: 1.2rem;
+            width: 1.2rem;
+            margin-left: 1rem;
+            margin-bottom: 3px;
+            fill: white;
+}
+
+.btn2.btnCircle2::before {
+            content: '';
+            position: absolute;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            width: 0px;
+            height: 0px;
+            z-index: -1;
+            border-radius: 50%;
+            transition: all 500ms ease-in-out;
+            transform: scale(0);
+}
+
+.btn2.btnCircle2:hover::before {
+            transform: scale(1.1);
+            transition: transform 500ms ease-in-out;
+            background-color: white;
+            width: 300px;
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+}
+
+.btn2.btnCircle2:hover .arrow2 {
+            display: none;
+
+}
+
+.btn2.btnCircle2 {
+            z-index: 1;
+            overflow: hidden;
+            background-color: transparent;
+            border: 2px solid white;
+            transition: color 500ms ease-in-out;
+}
+
+.btn2.btnCircle2:hover {
+            color: black;
 }
