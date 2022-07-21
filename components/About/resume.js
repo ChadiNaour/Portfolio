@@ -36,7 +36,7 @@ const Resume = ({ open, setOpen }) => {
               >
                 <Dialog.Panel className="relative bg-white rounded-lg text-left flex justify-center items-center overflow-hidden shadow-xl transform transition-all sm:my-8 sm:max-w-xl sm:w-full">
 
-                    <iframe src="./resume.pdf#view=fitH&toolbar=0" style={{width: '100%', height:'85vh' }} frameBorder="0"></iframe>
+                    <iframe src="./resume.pdf#view=fitH&toolbar=1" style={{width: '100%', height:'91vh' }} frameBorder="1"></iframe>
                     {/* <button
                       type="button"
                       className=" w-full inline-flex justify-center opacity-75 rounded-full shadow-sm p-1 my-2 bg-white text-base font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black sm:mt-2 sm:ml-3 sm:w-auto sm:text-sm"

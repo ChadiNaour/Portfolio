@@ -46,7 +46,12 @@ animation:${play} 1s ease infinite;
 animation-play-state: ${props => props.click ? "running" : "paused"};
 height: 1.8rem;
 width: 4px;
-margin:0 0.14rem
+margin:0 0.14rem;
+@media (max-width: 768px) {
+    height: 1.4rem;
+    width: 3px;
+    margin: 0 0.1rem
+}
 `
 
 const SoundBar = () => {
@@ -56,22 +61,22 @@ const SoundBar = () => {
     const handleClick = () => {
         setClick(!click);
 
-        if(!click){
+        if (!click) {
             ref.current.play();
-        }else{
+        } else {
             ref.current.pause();
         }
     }
     return (
         <Box onClick={() => handleClick()}>
-            <Line click={click}/>
-            <Line click={click}/>
-            <Line click={click}/>
-            <Line click={click}/>
-            <Line click={click}/>
+            <Line click={click} />
+            <Line click={click} />
+            <Line click={click} />
+            <Line click={click} />
+            <Line click={click} />
 
 
-            <audio src={music} ref={ref}  loop />
+            <audio src={music} ref={ref} loop />
         </Box>
     )
 }

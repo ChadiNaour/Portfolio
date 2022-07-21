@@ -18,7 +18,7 @@ body::-webkit-scrollbar {
 .blackMirror {
   position: relative;
   font-family: 'reload1', Arial, sans-serif;
-  font-size: calc(20px + 5vw);
+  font-size: calc(25px + 5vw);
   font-weight: 500;
   color: #fff;
   letter-spacing: 0.02em;

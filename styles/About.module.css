@@ -1,8 +1,8 @@
 .btn {
             position: relative;
             background: white;
-            height: 3.5em;
-            width: 11em;
+            /* height: 3.5em;
+            width: 11em; */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -10,10 +10,6 @@
 }
 
 .arrow {
-            width: 1.2rem;
-            width: 1.2rem;
-            margin-left: 1rem;
-            margin-bottom: 3px;
             fill: #0a0c11;
 }
 
@@ -71,8 +67,8 @@
             border: 1px solid white;
             color: white;
             stroke-width: 2px;
-            height: 3.5em;
-            width: 14em;
+            /* height: 3.5em;
+            width: 14em; */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -81,10 +77,6 @@
 }
 
 .arrow2 {
-            width: 1.2rem;
-            width: 1.2rem;
-            margin-left: 1rem;
-            margin-bottom: 3px;
             fill: white;
 }
 
