@@ -31,11 +31,14 @@ module.exports = {
         'dark' : '#0a0c11',
       },
       fontFamily: {
+        //Reload font
         'reloadNormal': ['reload1'],
         'reloadBold': ['reload2'],
         'reloadLight': ['reload3,arial narrow,Arial,Helvetica,sans-serif'],
+        //GT cinetypefont
         'cinetype' : ['cinetype'],
         'uni-sans' : ['uni-sans'],
+        //Timmons font
         'timmons' : ['TIMMONS NY']
       },
     }

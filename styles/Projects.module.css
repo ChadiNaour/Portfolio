@@ -10,7 +10,7 @@
 }
 
 .arrow {
-            fill: #0a0c11;
+            fill: #2B2B2B;
 }
 
 .btn.btnCircle::before {
@@ -32,7 +32,7 @@
 .btn.btnCircle:hover::before {
             transform: scale(1.1);
             transition: transform 500ms ease-in-out;
-            background-color: #0a0c11;
+            background-color: #2B2B2B;
             width: 300px;
             height: 300px;
             display: flex;
@@ -63,7 +63,7 @@
 
 .btn2 {
             position: relative;
-            background: #0a0c11;
+            background: #2B2B2B;
             border: 1px solid white;
             color: white;
             /* height: 3.5em;
@@ -82,7 +82,7 @@
 .btn2.btnCircle2::before {
             content: '';
             position: absolute;
-            background-color: white;
+            background-color: #2B2B2B;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -115,11 +115,17 @@
 .btn2.btnCircle2 {
             z-index: 1;
             overflow: hidden;
-            background-color: #0a0c11;
+            background-color: #2B2B2B;
             border: 1px solid white;
             transition: color 500ms ease-in-out;
 }
 
 .btn2.btnCircle2:hover {
             color: black;
+}
+
+.btn.btnCircle:hover .Icon {
+            fill: white;
+            transition: all 500ms ease-in-out;
+
 }

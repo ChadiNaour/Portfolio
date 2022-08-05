@@ -75,7 +75,7 @@ const HomeSection = ({ resultRef }) => {
     };
 
     return (
-        <section className="h-full relative flex z-10  w-full flex flex-col justify-center items-center overflow-hidden ">
+        <motion.section className="h-full relative flex z-10  w-full flex flex-col justify-center items-center overflow-hidden ">
             <motion.div initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{
@@ -139,7 +139,7 @@ const HomeSection = ({ resultRef }) => {
                     color: "black",
                 }}>ↆ</RoundedButton>
             </div>
-        </section>
+        </motion.section>
     )
 }
 export default HomeSection
