@@ -87,7 +87,7 @@ const HomeSection = ({ resultRef }) => {
                 <div className='hidden  sm:block absolute font-reloadLight  text-white text-lg  md:text-lg pl-6 md:pl-6 z-10 pt-4 -rotate-90' style={{ userSelect: "none" }}>home</div>
             </motion.div>
             <motion.div initial={{ height: 0 }}
-                animate={{ height: "60%" }}
+                animate={{ height: "60vh" }}
                 transition={{
                     opacity: { ease: "linear" },
                     delay: 1,

@@ -101,11 +101,11 @@ const AboutSection = forwardRef((props, AboutRef) => {
         {/* left container */}
         <div className='p-4 md:pr-8 flex  flex-col  w-full lg:w-2/3'>
           <div className="w-full h-full relative flex flex-col items-start justify-center ">
-            <div className='font-cinetype text-3xl xl:text-4xl 2xl:text-5xl mb-2' style={{ color: "transparent", WebkitTextStroke: "0.02em #fff" }}>HI THERE</div>
-            <div className='font-cinetype text-xl sm:text-2xl xl:text-3xl 2xl:text-4xl  text-white leading-tight md:text-xl md:leading-tight lg:leading-tight xl:leading-tight 2xl:leading-tight tracking-wide mb-4'>I'm a passionate Front-end web developer, I specialize in designing and developing clean, functional and interactive user experiences, I'm quietly confident, fast learner, and perpetually working on improving myself.</div>
+            <div className='font-cinetype text-3xl xl:text-4xl 2xl:text-5xl mb-3' style={{ color: "transparent", WebkitTextStroke: "0.02em #fff" }}>HI THERE</div>
+            <div className='font-cinetype text-xl sm:text-2xl xl:text-3xl 2xl:text-4xl  text-white leading-tight md:text-xl md:leading-tight lg:leading-tight xl:leading-tight 2xl:leading-tight tracking-wider mb-6'>I'm a passionate Front-end web developer, I specialize in designing and developing clean, functional and interactive user experiences, I'm quietly confident, fast learner, and perpetually working on improving myself.</div>
             {/* main stack */}
             <div className='hidden md:flex md:w-full md:pr-8'>
-              <div className='w-full flex justify-between px-4 xl:px-6 h-16 xl:px-8 xl:h-20  bg-gradient-to-b from-[#312E2E] to-[#403D3D] mb-6 rounded-md flex flex-row items-center shadow-md'>
+              <div className='w-full flex justify-between px-4 xl:px-6 h-16 xl:px-8 xl:h-20  bg-gradient-to-b from-[#312E2E] to-[#403D3D] mb-7 rounded-md flex flex-row items-center shadow-md'>
                 <div className='flex justify-center items-center   h-full'><span className='text-white font-reloadLight text-sm md:text-md xl:text-xl 2xl:text-2xl'>MAIN STACK</span></div>
                 {/* <div className='flex flex-row gap-6 bg-green-200'>
                   <Swiper
@@ -183,14 +183,14 @@ const AboutSection = forwardRef((props, AboutRef) => {
               </div>
             </div>
             {/* buttons */}
-            <div className='flex flex-row'>
+            <div className='flex flex-row '>
               <button className={`${AboutStyles.btn} ${AboutStyles.btnCircle} h-10 w-28 sm:h-10 sm:w-32  xl:h-11 xl:w-40 2xl:h-12 2xl:w-44`}
                 onClick={(e) => {
                   e.preventDefault();
                   setOpen(!open);
                 }}
               >
-                <span className='cotet z-20 font-reloadLight mt-1 text-sm lg:text-[1em] xl:text-xl flex flex-row items-center'>RESUME<svg xmlns="http://www.w3.org/2000/svg" className={`${AboutStyles.arrow} w-4 h-4 xl:w-4 xl:h-4 mb-1  ml-3`} viewBox="0 0 448 512"><path d="M438.6 278.6l-160 160C272.4 444.9 264.2 448 256 448s-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L338.8 288H32C14.33 288 .0016 273.7 .0016 256S14.33 224 32 224h306.8l-105.4-105.4c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l160 160C451.1 245.9 451.1 266.1 438.6 278.6z" /></svg></span>
+                <span className='cotet z-20 font-reloadLight mt-1 text-sm lg:text-[1em] xl:text-xl flex flex-row items-center'>RESUME<svg xmlns="http://www.w3.org/2000/svg" className={`${AboutStyles.arrow} w-4 h-4 xl:w-5 xl:h-5 mb-1  ml-3`} viewBox="0 0 448 512"><path d="M438.6 278.6l-160 160C272.4 444.9 264.2 448 256 448s-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L338.8 288H32C14.33 288 .0016 273.7 .0016 256S14.33 224 32 224h306.8l-105.4-105.4c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l160 160C451.1 245.9 451.1 266.1 438.6 278.6z" /></svg></span>
               </button>
               <button className={`${AboutStyles.btn2} ${AboutStyles.btnCircle2} h-10 w-36 sm:h-10 sm:w-44 ml-3 xl:h-11 xl:w-52 xl:ml-4 2xl:h-12 2xl:w-60 2xl:ml-6`}
               // onClick={(e) => {
@@ -198,7 +198,7 @@ const AboutSection = forwardRef((props, AboutRef) => {
               //   setOpen(!open);
               // }}
               >
-                <span className='cotet z-20 font-reloadLight mt-1 text-sm lg:text-[1em] xl:text-xl flex flex-row items-center'>Get in touch<svg xmlns="http://www.w3.org/2000/svg" className={`${AboutStyles.arrow2}  w-4 h-4 xl:w-4 xl:h-4 mb-1 ml-3`} viewBox="0 0 448 512"><path d="M438.6 278.6l-160 160C272.4 444.9 264.2 448 256 448s-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L338.8 288H32C14.33 288 .0016 273.7 .0016 256S14.33 224 32 224h306.8l-105.4-105.4c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l160 160C451.1 245.9 451.1 266.1 438.6 278.6z" /></svg></span>
+                <span className='cotet z-20 font-reloadLight mt-1 text-sm lg:text-[1em] xl:text-xl flex flex-row items-center'>Get in touch<svg xmlns="http://www.w3.org/2000/svg" className={`${AboutStyles.arrow2}  w-4 h-4 xl:w-5 xl:h-5 mb-1 ml-3`} viewBox="0 0 448 512"><path d="M438.6 278.6l-160 160C272.4 444.9 264.2 448 256 448s-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L338.8 288H32C14.33 288 .0016 273.7 .0016 256S14.33 224 32 224h306.8l-105.4-105.4c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l160 160C451.1 245.9 451.1 266.1 438.6 278.6z" /></svg></span>
               </button>
             </div>
           </div>
