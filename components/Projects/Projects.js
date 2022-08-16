@@ -99,7 +99,7 @@ const ProjectsSection = ({ }) => {
                     <div className='hidden  sm:block absolute font-reloadLight  text-white text-lg  md:text-lg pl-6 md:pl-6 z-10 pt-4 -rotate-90' style={{ userSelect: "none" }}>work</div>
                 </motion.div>
                 <motion.div animate={animation1} initial="hidden" variants={lineVariants}
-                    className="hidden sm:block  absolute top-1/4 3xl:top-[20%] left-0  w-10  bottom-10 ml-7 md:ml-8 lg:ml-10 border-l-[1px] border-white">
+                    className="hidden sm:block  absolute top-1/4 3xl:top-[20%] left-0  w-10  bottom-10 ml-7 md:ml-8 lg:ml-10 border-l-[1px] z-10 border-white">
                 </motion.div>
             </div>
             <div className='hidden sm:block  absolute z-0 mx-auto p-0 font-timmons md:text-6xl'
@@ -129,22 +129,23 @@ const ProjectsSection = ({ }) => {
             <Swiper className="mySwiper cursor-grab">
                 {Projects.map((project, index) => (
                     <SwiperSlide>
-                        <div className={`w-screen h-full flex justify-center items-center`}>
-                            <div className='w-3/5 h-1/2 z-20 rounded-lg relative flex flex-col items-center shadow-2xl' key={index} style={{ backgroundColor: "#2B2B2B" }}>
-                                <div className="h-1/5 w-full">
-                                    <div className="absolute right-0 mr-8 mt-8  top-0"><span className='text-white text-2xl font-reloadLight'>{index + 1} / 5</span></div>
+                        <div className={`w-screen h-full flex justify-center z-20 items-center`}>
+                            <div className='w-[90%] h-3/4 md:w-3/5 md:h-1/2 z-20 rounded-md md:rounded-lg relative flex flex-col items-center shadow-2xl' key={index} style={{ backgroundColor: "#2B2B2B" }}>
+                                <div className="h-[10%] md:h-1/5 w-full ">
+                                    {/* <div className='text-white  font-reloadBold text-2xl md:text-[2.25rem] ml-5 mt-5 tracking-wider md:hidden'>{project.name}</div> */}
+                                    <div className="absolute right-0 mr-5 mt-4 md:mr-8 md:mt-8  top-0"><span className='text-white text-xl md:text-2xl font-reloadLight'>{index + 1} / 5</span></div>
                                 </div>
-                                <div className="h-3/5 w-full pl-20 pr-20 flex flex-row">
-                                    <div className="relative bg-gray-400 h-full w-1/3  p-2 flex justify-center items-center">
-                                        <Image layout="fill" className="object-cover" src={project.image} />
+                                <div className="h-[78%]  md:h-3/5 w-full  md:px-20  flex flex-col md:flex-row justify-start items-center">
+                                    <div className="relative bg-gray-400 h-44 w-48  md:h-full md:w-1/3 flex justify-center items-center">
+                                        <Image layout="fill" src={project.image} />
                                     </div>
-                                    <div className="h-full w-2/3 flex flex-col justify-start">
-                                        <span className='text-white  font-reloadBold text-[2.25rem] ml-12 tracking-wider'>{project.name}</span>
-                                        <span className='text-gray-50 font-cinetype text-2xl ml-12 leading-normal md:leading-normal lg:leading-norm xl:leading-normal 2xl:leading-normal tracking-wider '>{project.description}</span>
-                                        <div className=" w-auto flex flex-row gap-5 items-center ml-12 mt-4 ">
+                                    <div className="md:h-full pt-4 md:h-full w-full md:w-2/3 flex flex-col justify-center md:justify-start">
+                                        <span className='text-white text-center md:text-left  font-reloadBold text-[2em] md:text-4xl md:ml-12 tracking-wider md:mb-2'>{project.name}</span>
+                                        <span className='text-gray-50 text-center md:text-left font-cinetype text-xl md:text-2xl px-3 md:px-0 md:ml-12 leading-normal md:leading-normal lg:leading-norm xl:leading-normal 2xl:leading-normal tracking-wider'>{project.description}</span>
+                                        <div className="w-auto flex flex-row gap-3 md:gap-5 justify-center md:justify-start  items-center md:ml-12 mt-4 md:mt-6">
                                             {project.stack.map((stack, index) => (
-                                                <div className='w-auto relative group cursor-pointer' >
-                                                    {stack.name !== "Simple DirectMedia Layer" ? <Icon height={40} width={40} key={index} icon={stack.icon} style={{ color: "white" }} /> : <svg width={40} height={40} xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path fill="white" d="M18.787 27.148H9.672l7.213-18.755h3.454l-5.902 15.345h5.683l-1.333 3.41zM2 19.344l1.2-3.3a4.129 4.129 0 0 0 1.53 1.137a4.89 4.89 0 0 0 1.989.372a5.9 5.9 0 0 0 1.137-.109a3.6 3.6 0 0 0 .9-.306a1.8 1.8 0 0 0 .634-.481a1.685 1.685 0 0 0 .372-.59A1.172 1.172 0 0 0 9.8 15.3a1.66 1.66 0 0 0-.437-.634a5.171 5.171 0 0 0-.809-.568c-.328-.175-.678-.372-1.071-.546a3.814 3.814 0 0 1-1.945-1.771a3.349 3.349 0 0 1 .066-2.514a6.006 6.006 0 0 1 1.18-1.989A6.879 6.879 0 0 1 8.557 5.9a8.121 8.121 0 0 1 2.143-.785a10.318 10.318 0 0 1 2.317-.262a13.481 13.481 0 0 1 2.011.131a5.655 5.655 0 0 1 1.486.437L15.4 8.5a2.5 2.5 0 0 0-.656-.459a4.246 4.246 0 0 0-.787-.328a6 6 0 0 0-.852-.2a6.317 6.317 0 0 0-1.924.066a3.6 3.6 0 0 0-.9.306a2.534 2.534 0 0 0-.678.481a1.834 1.834 0 0 0-.393.612a.992.992 0 0 0-.044.656a1.606 1.606 0 0 0 .35.568a3.877 3.877 0 0 0 .7.525a10.049 10.049 0 0 0 .984.525a7.434 7.434 0 0 1 1.311.787a3.531 3.531 0 0 1 .874.94a2.2 2.2 0 0 1 .328 1.2a4.528 4.528 0 0 1-.306 1.574a5.876 5.876 0 0 1-1.224 2.077a6.589 6.589 0 0 1-1.771 1.355a7.771 7.771 0 0 1-2.142.743a11.943 11.943 0 0 1-2.339.219a12.16 12.16 0 0 1-2.251-.2A5.027 5.027 0 0 1 2 19.344Z" /><path fill="white" d="m17.738 17.2l-1.049 2.71h1.989a10.989 10.989 0 0 0 6.492-2.077a11.394 11.394 0 0 0 4.175-5.53q2.623-7.213-5.268-7.213h-5.246l-.984 2.71h4.984a3.319 3.319 0 0 1 2.995 1.224a3.706 3.706 0 0 1 .022 3.322a7.675 7.675 0 0 1-2.514 3.541a6.179 6.179 0 0 1-3.869 1.313h-1.727" /></svg>}
+                                                <div className='w-auto relative group cursor-pointer flex justify-center items-center' >
+                                                    {stack.name !== "Simple DirectMedia Layer" ? <Icon className='h-8 w-8 md:h-10 md:w-10' key={index} icon={stack.icon} style={{ color: "white" }} /> : <svg width={40} height={40} xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path fill="white" d="M18.787 27.148H9.672l7.213-18.755h3.454l-5.902 15.345h5.683l-1.333 3.41zM2 19.344l1.2-3.3a4.129 4.129 0 0 0 1.53 1.137a4.89 4.89 0 0 0 1.989.372a5.9 5.9 0 0 0 1.137-.109a3.6 3.6 0 0 0 .9-.306a1.8 1.8 0 0 0 .634-.481a1.685 1.685 0 0 0 .372-.59A1.172 1.172 0 0 0 9.8 15.3a1.66 1.66 0 0 0-.437-.634a5.171 5.171 0 0 0-.809-.568c-.328-.175-.678-.372-1.071-.546a3.814 3.814 0 0 1-1.945-1.771a3.349 3.349 0 0 1 .066-2.514a6.006 6.006 0 0 1 1.18-1.989A6.879 6.879 0 0 1 8.557 5.9a8.121 8.121 0 0 1 2.143-.785a10.318 10.318 0 0 1 2.317-.262a13.481 13.481 0 0 1 2.011.131a5.655 5.655 0 0 1 1.486.437L15.4 8.5a2.5 2.5 0 0 0-.656-.459a4.246 4.246 0 0 0-.787-.328a6 6 0 0 0-.852-.2a6.317 6.317 0 0 0-1.924.066a3.6 3.6 0 0 0-.9.306a2.534 2.534 0 0 0-.678.481a1.834 1.834 0 0 0-.393.612a.992.992 0 0 0-.044.656a1.606 1.606 0 0 0 .35.568a3.877 3.877 0 0 0 .7.525a10.049 10.049 0 0 0 .984.525a7.434 7.434 0 0 1 1.311.787a3.531 3.531 0 0 1 .874.94a2.2 2.2 0 0 1 .328 1.2a4.528 4.528 0 0 1-.306 1.574a5.876 5.876 0 0 1-1.224 2.077a6.589 6.589 0 0 1-1.771 1.355a7.771 7.771 0 0 1-2.142.743a11.943 11.943 0 0 1-2.339.219a12.16 12.16 0 0 1-2.251-.2A5.027 5.027 0 0 1 2 19.344Z" /><path fill="white" d="m17.738 17.2l-1.049 2.71h1.989a10.989 10.989 0 0 0 6.492-2.077a11.394 11.394 0 0 0 4.175-5.53q2.623-7.213-5.268-7.213h-5.246l-.984 2.71h4.984a3.319 3.319 0 0 1 2.995 1.224a3.706 3.706 0 0 1 .022 3.322a7.675 7.675 0 0 1-2.514 3.541a6.179 6.179 0 0 1-3.869 1.313h-1.727" /></svg>}
                                                     <span className="inline-block font-cinetype absolute scale-0 w-auto group-hover:scale-100 -bottom-12 z-50 py-2 px-3 text-sm text-white bg-graye rounded-lg shadow-sm duration-300">
                                                         {stack.name}
                                                     </span>
@@ -153,14 +154,14 @@ const ProjectsSection = ({ }) => {
                                         </div>
                                     </div>
                                 </div>
-                                <div className='h-1/5 w-full flex flex-row justify-end'>
-                                    <div className=" h-full w-1/3 flex justify-end items-center pb-6 mr-10">
+                                <div className='h-[12%] md:h-1/5 w-full flex justify-center flex-row md:justify-end'>
+                                    <div className="h-full md:w-1/3 flex md:justify-end items-start  md:pb-6 mx-4 md:mr-10">
                                         <a className={`${ProjectStyle.btn} ${ProjectStyle.btnCircle} h-10 w-28 sm:h-10 sm:w-32  xl:h-11 xl:w-40 2xl:h-12 2xl:w-44`} href={project.link} target="_blank">
                                             <svg xmlns="http://www.w3.org/2000/svg" className={`${ProjectStyle.Icon} w-[1.2rem] h-[1.2rem] mr-2`} viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" /></svg>
                                             <span className='cotet z-20 font-reloadLight mt-1 text-sm lg:text-[1rem] flex flex-row items-center'>repo</span>
                                             <svg fill="black" className={`${ProjectStyle.arrow} w-4 h-4 xl:w-4 xl:h-4  ml-3`} viewBox="0 0 448 512"><path d="M438.6 278.6l-160 160C272.4 444.9 264.2 448 256 448s-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L338.8 288H32C14.33 288 .0016 273.7 .0016 256S14.33 224 32 224h306.8l-105.4-105.4c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l160 160C451.1 245.9 451.1 266.1 438.6 278.6z" /></svg>
                                         </a>
-                                        <a className={`${ProjectStyle.btn2} ${ProjectStyle.btnCircle2} h-10 w-28 sm:h-10 sm:w-32  xl:h-11 xl:w-40 2xl:h-12 2xl:w-44 ml-5`}>
+                                        <a className={`${ProjectStyle.btn2} ${ProjectStyle.btnCircle2} h-10 w-28 sm:h-10 sm:w-32  xl:h-11 xl:w-40 2xl:h-12 2xl:w-44 ml-5 cursor-pointer`}>
                                             <span className='cotet z-20 font-reloadLight mt-1 text-sm lg:text-[1rem] flex flex-row items-center'>See more</span>
                                             <svg fill="black" className={`${ProjectStyle.arrow2} w-4 h-4 xl:w-4 xl:h-4  ml-3`} viewBox="0 0 448 512"><path d="M438.6 278.6l-160 160C272.4 444.9 264.2 448 256 448s-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L338.8 288H32C14.33 288 .0016 273.7 .0016 256S14.33 224 32 224h306.8l-105.4-105.4c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l160 160C451.1 245.9 451.1 266.1 438.6 278.6z" /></svg>
                                         </a>
@@ -177,7 +178,7 @@ const ProjectsSection = ({ }) => {
                 <span>© Copyright 2022 Designed & developed by nchadi</span>
             </div> */}
             {/* </motion.main> */}
-            <div className="absolute h-28   flex justify-center items-start left-0 bottom-0 w-full text-lg select-none" >
+            <div className="absolute h-20 md:h-28   flex justify-center items-start left-0 bottom-0 w-full text-lg select-none" >
                 <div className="h-12 w-96   flex justify-start items-start">
                     <div className=" h-full z-10 w-2/5 bg-dark"></div>
                     <div className='flex flex-col  justify-center gap-3 items-start  h-full w-1/5'>
@@ -188,7 +189,7 @@ const ProjectsSection = ({ }) => {
                                 duration: 2,
                                 repeat: Infinity,
                             }} className="h-[3px] bg-white w-full"></motion.div>
-                        <span className='text-2xl z-1 font-cinetype text-white mx-auto'>DRAG</span>
+                        <span className='text-xl md:text-2xl z-1 font-cinetype text-white mx-auto'>DRAG</span>
                     </div>
                     <div className="h-full z-10 w-2/5 bg-dark"></div>
                 </div>
