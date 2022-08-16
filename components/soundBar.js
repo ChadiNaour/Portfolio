@@ -44,9 +44,9 @@ background: white;
 border: 1px solid white;
 animation:${play} 1s ease infinite;
 animation-play-state: ${props => props.click ? "running" : "paused"};
-height: 1.8rem;
-width: 4px;
-margin:0 0.14rem;
+height: 1.7rem;
+width: 3.5px;
+margin:0 0.11rem;
 @media (max-width: 768px) {
     height: 1.4rem;
     width: 3px;

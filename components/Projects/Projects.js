@@ -6,7 +6,7 @@ import { motion, useAnimation } from "framer-motion"
 import { useInView } from 'react-intersection-observer';
 import { Icon } from '@iconify/react';
 import ProjectStyle from '../../styles/Projects.module.css';
-import Projects from './ProjectsSetails';
+import Projects from './ProjectsDetails';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 //image
@@ -126,20 +126,6 @@ const ProjectsSection = ({ }) => {
                     userSelect: "none",
                 }}
             >PROJECTS</div>
-            {/* <motion.main className="h-full w-full bg-red-400 overflow-hidden flex flex-row justify-center items-center" drag="x" dragConstraints={{ right: 0, left: -width }}> */}
-            {/* projects cards */}
-            {/* <Swiper className="mySwiper">
-                <SwiperSlide>Slide 1</SwiperSlide>
-                <SwiperSlide>Slide 2</SwiperSlide>
-                <SwiperSlide>Slide 3</SwiperSlide>
-                <SwiperSlide>Slide 4</SwiperSlide>
-                <SwiperSlide>Slide 5</SwiperSlide>
-                <SwiperSlide>Slide 6</SwiperSlide>
-                <SwiperSlide>Slide 7</SwiperSlide>
-                <SwiperSlide>Slide 8</SwiperSlide>
-                <SwiperSlide>Slide 9</SwiperSlide>
-            </Swiper> */}
-            {/* <motion.div className="h-full w-auto z-10 cursor-grab flex flex-row" dragDirectionLock drag="x" dragConstraints={{ right: 0, left: -width }}> */}
             <Swiper className="mySwiper cursor-grab">
                 {Projects.map((project, index) => (
                     <SwiperSlide>
@@ -151,19 +137,16 @@ const ProjectsSection = ({ }) => {
                                 <div className="h-3/5 w-full pl-20 pr-20 flex flex-row">
                                     <div className="relative bg-gray-400 h-full w-1/3  p-2 flex justify-center items-center">
                                         <Image layout="fill" className="object-cover" src={project.image} />
-                                        {/* <Image layout="fill" className="object-cover" src={RedTetris} /> */}
-                                        {/* <Image width={90} height={70} src={Logo} /> */}
                                     </div>
                                     <div className="h-full w-2/3 flex flex-col justify-start">
-                                        <span className='text-white  font-reloadBold text-[2.5rem] ml-12 tracking-wider'>{project.name}</span>
+                                        <span className='text-white  font-reloadBold text-[2.25rem] ml-12 tracking-wider'>{project.name}</span>
                                         <span className='text-gray-50 font-cinetype text-2xl ml-12 leading-normal md:leading-normal lg:leading-norm xl:leading-normal 2xl:leading-normal tracking-wider '>{project.description}</span>
                                         <div className=" w-auto flex flex-row gap-5 items-center ml-12 mt-4 ">
                                             {project.stack.map((stack, index) => (
-                                                <div className='relative group' >
-                                                    <Icon height={40} width={40} key={index} color="white" className='text-white' icon={stack.icon} style={{ color: "white" }} />
-                                                    <span className="inline-block font-cinetype absolute scale-0 group-hover:scale-100 -bottom-12 z-50 py-2 px-3 text-sm font-medium text-white bg-graye rounded-lg shadow-sm duration-300 tooltip">
+                                                <div className='w-auto relative group cursor-pointer' >
+                                                    {stack.name !== "Simple DirectMedia Layer" ? <Icon height={40} width={40} key={index} icon={stack.icon} style={{ color: "white" }} /> : <svg width={40} height={40} xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path fill="white" d="M18.787 27.148H9.672l7.213-18.755h3.454l-5.902 15.345h5.683l-1.333 3.41zM2 19.344l1.2-3.3a4.129 4.129 0 0 0 1.53 1.137a4.89 4.89 0 0 0 1.989.372a5.9 5.9 0 0 0 1.137-.109a3.6 3.6 0 0 0 .9-.306a1.8 1.8 0 0 0 .634-.481a1.685 1.685 0 0 0 .372-.59A1.172 1.172 0 0 0 9.8 15.3a1.66 1.66 0 0 0-.437-.634a5.171 5.171 0 0 0-.809-.568c-.328-.175-.678-.372-1.071-.546a3.814 3.814 0 0 1-1.945-1.771a3.349 3.349 0 0 1 .066-2.514a6.006 6.006 0 0 1 1.18-1.989A6.879 6.879 0 0 1 8.557 5.9a8.121 8.121 0 0 1 2.143-.785a10.318 10.318 0 0 1 2.317-.262a13.481 13.481 0 0 1 2.011.131a5.655 5.655 0 0 1 1.486.437L15.4 8.5a2.5 2.5 0 0 0-.656-.459a4.246 4.246 0 0 0-.787-.328a6 6 0 0 0-.852-.2a6.317 6.317 0 0 0-1.924.066a3.6 3.6 0 0 0-.9.306a2.534 2.534 0 0 0-.678.481a1.834 1.834 0 0 0-.393.612a.992.992 0 0 0-.044.656a1.606 1.606 0 0 0 .35.568a3.877 3.877 0 0 0 .7.525a10.049 10.049 0 0 0 .984.525a7.434 7.434 0 0 1 1.311.787a3.531 3.531 0 0 1 .874.94a2.2 2.2 0 0 1 .328 1.2a4.528 4.528 0 0 1-.306 1.574a5.876 5.876 0 0 1-1.224 2.077a6.589 6.589 0 0 1-1.771 1.355a7.771 7.771 0 0 1-2.142.743a11.943 11.943 0 0 1-2.339.219a12.16 12.16 0 0 1-2.251-.2A5.027 5.027 0 0 1 2 19.344Z" /><path fill="white" d="m17.738 17.2l-1.049 2.71h1.989a10.989 10.989 0 0 0 6.492-2.077a11.394 11.394 0 0 0 4.175-5.53q2.623-7.213-5.268-7.213h-5.246l-.984 2.71h4.984a3.319 3.319 0 0 1 2.995 1.224a3.706 3.706 0 0 1 .022 3.322a7.675 7.675 0 0 1-2.514 3.541a6.179 6.179 0 0 1-3.869 1.313h-1.727" /></svg>}
+                                                    <span className="inline-block font-cinetype absolute scale-0 w-auto group-hover:scale-100 -bottom-12 z-50 py-2 px-3 text-sm text-white bg-graye rounded-lg shadow-sm duration-300">
                                                         {stack.name}
-                                                        <div class="tooltip-arrow" data-popper-arrow></div>
                                                     </span>
                                                 </div>
                                             ))}

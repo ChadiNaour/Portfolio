@@ -2,6 +2,7 @@ import React, { useRef, useState, forwardRef } from 'react';
 import styled from 'styled-components';
 import AnimatedText from './AnimatedText';
 import { motion, useAnimation, useTransform } from "framer-motion";
+import { Icon } from '@iconify/react';
 
 const RoundedButton = styled(motion.div)`
     background-color: #0a0c11;
@@ -10,11 +11,11 @@ const RoundedButton = styled(motion.div)`
     justify-content: center;
     align-items: center;
     align-text: center;
-    height: 75px;
+    height: 70px;
     color: white;
     text-size: 6.5rem;
     box-shadow: 0 0 0 0 #fff, inset 0 0 0 1px #fff;
-    width: 75px;
+    width: 70px;
     border-radius: 50%;
     font-family: reload,arial narrow,Arial,Helvetica,sans-serif;
     font-weight: 700;
@@ -133,11 +134,13 @@ const HomeSection = ({ resultRef }) => {
                 }}
             >HI</div>
             <div className="absolute  pb-8 pt-2 flex justify-center items-center left-0 bottom-0 w-full text-md lg:text-xl  select-none" >
-                <RoundedButton onClick={() => scrollToSection()} whileHover={{
+                <RoundedButton onClick={() => scrollToSection()} 
+                whileHover={{
                     scale: 1.1,
                     backgroundColor: "white",
                     color: "black",
-                }}>ↆ</RoundedButton>
+                }}
+                ><Icon icon="akar-icons:arrow-down" width={22} height={22} /></RoundedButton>
             </div>
         </motion.section>
     )

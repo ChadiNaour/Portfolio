@@ -43,13 +43,11 @@ const RoundedButton = styled(motion.div)`
     display: flex;
     justify-content: center;
     align-items: center;
-    // padding: 25px 8px 21px;
     height: 70px;
     color: #000;
     box-shadow: 0 0 0 0 #fff, inset 0 0 0 1px #fff;
     width: 70px;
     border-radius: 50%;
-    // display: inline-block;
     z-index: 0;
     font-family: reload,arial narrow,Arial,Helvetica,sans-serif;
     font-weight: 300;
@@ -129,9 +127,12 @@ export default function Home() {
                   //             }) 
                   // }}
                   whileHover={{
-                    scale: 1.2,
-                    textShadow: "0px 0px 4px gray"
-                  }}><Icon icon="akar-icons:arrow-right" color="black" width={22} height={22} /></RoundedButton>
+                    scale: 1.1,
+                    backgroundColor: "black",
+                    color: "white",
+                    transition: "linear",
+                }}
+                  ><Icon icon="akar-icons:arrow-right" width={22} height={22} /></RoundedButton>
               </Link>
             </motion.div>
           </motion.div>
