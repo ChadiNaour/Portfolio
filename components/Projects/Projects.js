@@ -146,37 +146,41 @@ const ProjectsSection = ({ }) => {
                         <div className={`w-screen h-full flex justify-center items-center`}>
                             <div className='w-3/5 h-1/2 z-20 rounded-lg relative flex flex-col items-center shadow-2xl' key={index} style={{ backgroundColor: "#2B2B2B" }}>
                                 <div className="h-1/5 w-full">
-                                    <div className="absolute right-0 mr-8 mt-8  top-0"><span className='text-white text-2xl font-reloadLight'>{index + 1} / 6</span></div>
+                                    <div className="absolute right-0 mr-8 mt-8  top-0"><span className='text-white text-2xl font-reloadLight'>{index + 1} / 5</span></div>
                                 </div>
                                 <div className="h-3/5 w-full pl-20 pr-20 flex flex-row">
                                     <div className="relative bg-gray-400 h-full w-1/3  p-2 flex justify-center items-center">
-                                        <Image layout="fill" className="object-cover" src={project.image}/>
+                                        <Image layout="fill" className="object-cover" src={project.image} />
                                         {/* <Image layout="fill" className="object-cover" src={RedTetris} /> */}
                                         {/* <Image width={90} height={70} src={Logo} /> */}
                                     </div>
                                     <div className="h-full w-2/3 flex flex-col justify-start">
                                         <span className='text-white  font-reloadBold text-[2.5rem] ml-12 tracking-wider'>{project.name}</span>
                                         <span className='text-gray-50 font-cinetype text-2xl ml-12 leading-normal md:leading-normal lg:leading-norm xl:leading-normal 2xl:leading-normal tracking-wider '>{project.description}</span>
-                                        <div className=" w-1/2 flex flex-row gap-5 items-center ml-12 mt-4 ">
+                                        <div className=" w-auto flex flex-row gap-5 items-center ml-12 mt-4 ">
                                             {project.stack.map((stack, index) => (
-                                                <>
-                                                    <Icon height={40} key={index} color="white" icon={stack} />
-                                                </>
+                                                <div className='relative group' >
+                                                    <Icon height={40} width={40} key={index} color="white" className='text-white' icon={stack.icon} style={{ color: "white" }} />
+                                                    <span className="inline-block font-cinetype absolute scale-0 group-hover:scale-100 -bottom-12 z-50 py-2 px-3 text-sm font-medium text-white bg-graye rounded-lg shadow-sm duration-300 tooltip">
+                                                        {stack.name}
+                                                        <div class="tooltip-arrow" data-popper-arrow></div>
+                                                    </span>
+                                                </div>
                                             ))}
                                         </div>
                                     </div>
                                 </div>
                                 <div className='h-1/5 w-full flex flex-row justify-end'>
                                     <div className=" h-full w-1/3 flex justify-end items-center pb-6 mr-10">
-                                        <button className={`${ProjectStyle.btn} ${ProjectStyle.btnCircle} h-10 w-28 sm:h-10 sm:w-32  xl:h-11 xl:w-40 2xl:h-12 2xl:w-44`}>
+                                        <a className={`${ProjectStyle.btn} ${ProjectStyle.btnCircle} h-10 w-28 sm:h-10 sm:w-32  xl:h-11 xl:w-40 2xl:h-12 2xl:w-44`} href={project.link} target="_blank">
                                             <svg xmlns="http://www.w3.org/2000/svg" className={`${ProjectStyle.Icon} w-[1.2rem] h-[1.2rem] mr-2`} viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" /></svg>
                                             <span className='cotet z-20 font-reloadLight mt-1 text-sm lg:text-[1rem] flex flex-row items-center'>repo</span>
                                             <svg fill="black" className={`${ProjectStyle.arrow} w-4 h-4 xl:w-4 xl:h-4  ml-3`} viewBox="0 0 448 512"><path d="M438.6 278.6l-160 160C272.4 444.9 264.2 448 256 448s-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L338.8 288H32C14.33 288 .0016 273.7 .0016 256S14.33 224 32 224h306.8l-105.4-105.4c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l160 160C451.1 245.9 451.1 266.1 438.6 278.6z" /></svg>
-                                        </button>
-                                        <button className={`${ProjectStyle.btn2} ${ProjectStyle.btnCircle2} h-10 w-28 sm:h-10 sm:w-32  xl:h-11 xl:w-40 2xl:h-12 2xl:w-44 ml-5`}>
+                                        </a>
+                                        <a className={`${ProjectStyle.btn2} ${ProjectStyle.btnCircle2} h-10 w-28 sm:h-10 sm:w-32  xl:h-11 xl:w-40 2xl:h-12 2xl:w-44 ml-5`}>
                                             <span className='cotet z-20 font-reloadLight mt-1 text-sm lg:text-[1rem] flex flex-row items-center'>See more</span>
                                             <svg fill="black" className={`${ProjectStyle.arrow2} w-4 h-4 xl:w-4 xl:h-4  ml-3`} viewBox="0 0 448 512"><path d="M438.6 278.6l-160 160C272.4 444.9 264.2 448 256 448s-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L338.8 288H32C14.33 288 .0016 273.7 .0016 256S14.33 224 32 224h306.8l-105.4-105.4c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l160 160C451.1 245.9 451.1 266.1 438.6 278.6z" /></svg>
-                                        </button>
+                                        </a>
                                     </div>
                                 </div>
 

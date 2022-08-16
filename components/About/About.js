@@ -132,35 +132,35 @@ const AboutSection = forwardRef((props, AboutRef) => {
                 <div className='relative flex flex-row gap-3 xl:gap-6 overflow-visible '>
                   <div className='relative flex justify-end items-center group h-12 w-12 xl:h-16 xl:w-16 bg-green-200 rounded-md bg-[#403D3D] flex justify-center items-center  w-20'>
                     <Icon className=" w-[75%] h-[75%]" icon="logos:react" />
-                    <span className="inline-block absolute scale-0 group-hover:scale-100 -top-10 z-10 py-2 px-3 text-sm font-medium text-white bg-graye rounded-lg shadow-sm duration-300 tooltip">
+                    <span className="inline-block font-cinetype absolute scale-0 group-hover:scale-100 -top-10 z-10 py-2 px-3 text-sm font-medium text-white bg-graye rounded-lg shadow-sm duration-300 tooltip">
                       ReactJs
                       <div class="tooltip-arrow" data-popper-arrow></div>
                     </span>
                   </div>
                   <div className='relative flex justify-end group items-center h-12 w-12 xl:h-16 xl:w-16 bg-green-200 rounded-md bg-[#403D3D] flex justify-center items-center  w-20'>
                     <Icon className=" w-[75%] h-[75%] text-white" icon="cib:next-js" />
-                    <span className="inline-block absolute scale-0 group-hover:scale-100 -top-10 z-10 py-2 px-3 text-sm font-medium text-white bg-graye rounded-lg shadow-sm duration-300 tooltip">
+                    <span className="inline-block font-cinetype absolute scale-0 group-hover:scale-100 -top-10 z-10 py-2 px-3 text-sm font-medium text-white bg-graye rounded-lg shadow-sm duration-300 tooltip">
                       NextJs
                       <div class="tooltip-arrow" data-popper-arrow></div>
                     </span>
                   </div>
                   <div className='relative flex justify-end group items-center h-12 w-12 xl:h-16 xl:w-16 bg-green-200 rounded-md bg-[#403D3D] flex justify-center items-center  w-20'>
                     <Icon className=" w-[75%] h-[75%] rounded-sm" icon="logos:javascript" />
-                    <span className="inline-block absolute scale-0 group-hover:scale-100 -top-10 z-10 py-2 px-3 text-sm font-medium text-white bg-graye rounded-lg shadow-sm duration-300 tooltip">
+                    <span className="inline-block font-cinetype absolute scale-0 group-hover:scale-100 -top-10 z-10 py-2 px-3 text-sm font-medium text-white bg-graye rounded-lg shadow-sm duration-300 tooltip">
                       Javascript
                       <div class="tooltip-arrow" data-popper-arrow></div>
                     </span>
                   </div>
                   <div className='relative flex justify-end group items-center h-12 w-12 xl:h-16 xl:w-16 bg-green-200 rounded-md bg-[#403D3D] flex justify-center items-center  w-20'>
                     <Icon className=" w-[75%] h-[75%] rounded-sm" icon="logos:typescript-icon" />
-                    <span className="inline-block absolute scale-0 group-hover:scale-100 -top-10 z-10 py-2 px-3 text-sm font-medium text-white bg-graye rounded-lg shadow-sm duration-300 tooltip">
+                    <span className="inline-block font-cinetype absolute scale-0 group-hover:scale-100 -top-10 z-10 py-2 px-3 text-sm font-medium text-white bg-graye rounded-lg shadow-sm duration-300 tooltip">
                       Typescript
                       <div class="tooltip-arrow" data-popper-arrow></div>
                     </span>
                   </div>
                   <div className='relative flex justify-end group items-center h-12 w-12 xl:h-16 xl:w-16 bg-green-200 rounded-md bg-[#403D3D] flex justify-center items-center  w-20'>
                     <Icon className=" w-[75%] h-[75%] rounded-sm" icon="logos:redux" />
-                    <span className="inline-block absolute scale-0 group-hover:scale-100 -top-10 z-10 py-2 px-3 text-sm font-medium text-white bg-graye rounded-lg shadow-sm duration-300 tooltip">
+                    <span className="inline-block font-cinetype absolute scale-0 group-hover:scale-100 -top-10 z-10 py-2 px-3 text-sm font-medium text-white bg-graye rounded-lg shadow-sm duration-300 tooltip">
                       Redux
                       <div class="tooltip-arrow" data-popper-arrow></div>
                     </span>
@@ -174,7 +174,7 @@ const AboutSection = forwardRef((props, AboutRef) => {
                   </div>
                   <div className='flex justify-end items-center group h-12 w-12 xl:h-16 xl:w-16 bg-green-200 rounded-md bg-[#403D3D] flex justify-center items-center  w-20'>
                     <Icon className=" w-[75%] h-[75%]" icon="logos:figma" />
-                    <span className="inline-block absolute scale-0 group-hover:scale-100 -top-10 z-10 py-2 px-3 text-sm font-medium text-white bg-graye rounded-lg shadow-sm duration-300 tooltip">
+                    <span className="inline-block font-cinetype absolute scale-0 group-hover:scale-100 -top-10 z-10 py-2 px-3 text-sm font-medium text-white bg-graye rounded-lg shadow-sm duration-300 tooltip">
                       Figma
                       <div class="tooltip-arrow" data-popper-arrow></div>
                     </span>
@@ -192,14 +192,14 @@ const AboutSection = forwardRef((props, AboutRef) => {
               >
                 <span className='cotet z-20 font-reloadLight mt-1 text-sm lg:text-[1em] xl:text-xl flex flex-row items-center'>RESUME<svg xmlns="http://www.w3.org/2000/svg" className={`${AboutStyles.arrow} w-4 h-4 xl:w-5 xl:h-5 mb-1  ml-3`} viewBox="0 0 448 512"><path d="M438.6 278.6l-160 160C272.4 444.9 264.2 448 256 448s-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L338.8 288H32C14.33 288 .0016 273.7 .0016 256S14.33 224 32 224h306.8l-105.4-105.4c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l160 160C451.1 245.9 451.1 266.1 438.6 278.6z" /></svg></span>
               </button>
-              <button className={`${AboutStyles.btn2} ${AboutStyles.btnCircle2} h-10 w-36 sm:h-10 sm:w-44 ml-3 xl:h-11 xl:w-52 xl:ml-4 2xl:h-12 2xl:w-60 2xl:ml-6`}
+              <a href="mailto:naourchadi@gmail.com" target="_blank" className={`${AboutStyles.btn2} ${AboutStyles.btnCircle2} h-10 w-36 sm:h-10 sm:w-44 ml-3 xl:h-11 xl:w-52 xl:ml-4 2xl:h-12 2xl:w-60 2xl:ml-6`}
               // onClick={(e) => {
               //   e.preventDefault();
               //   setOpen(!open);
               // }}
               >
                 <span className='cotet z-20 font-reloadLight mt-1 text-sm lg:text-[1em] xl:text-xl flex flex-row items-center'>Get in touch<svg xmlns="http://www.w3.org/2000/svg" className={`${AboutStyles.arrow2}  w-4 h-4 xl:w-5 xl:h-5 mb-1 ml-3`} viewBox="0 0 448 512"><path d="M438.6 278.6l-160 160C272.4 444.9 264.2 448 256 448s-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L338.8 288H32C14.33 288 .0016 273.7 .0016 256S14.33 224 32 224h306.8l-105.4-105.4c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l160 160C451.1 245.9 451.1 266.1 438.6 278.6z" /></svg></span>
-              </button>
+              </a>
             </div>
           </div>
         </div>
