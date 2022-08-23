@@ -62,6 +62,18 @@ const AboutSection = forwardRef((props, AboutRef) => {
       }
     }
   }
+
+  const MainStack = [
+    { Icon: "logos:react", name: "ReactJs" },
+    { Icon: "cib:next-js", name: "NextJs" },
+    { Icon: "logos:javascript", name: "Javascript" },
+    { Icon: "logos:typescript-icon", name: "Typescript" },
+    { Icon: "logos:redux", name: "Redux" },
+    { Icon: "logos:tailwindcss-icon", name: "TailwindCss" },
+    { Icon: "logos:figma", name: "Figma" },
+    // {Icon:"", name: "Fast Learning"},
+    // {Icon:"", name: "Firefighting"},
+  ];
   useEffect(() => {
     console.log("about in view", inView);
     if (inView) {
@@ -123,55 +135,30 @@ const AboutSection = forwardRef((props, AboutRef) => {
               <div className='w-full flex justify-between px-4 xl:px-6 h-16 xl:px-8 xl:h-20  bg-gradient-to-b from-[#312E2E] to-[#403D3D] mb-7 rounded-md flex flex-row items-center shadow-md'>
                 <div className='flex justify-center items-center   h-full'><span className='text-white font-reloadLight text-sm md:text-md xl:text-xl 2xl:text-2xl'>MAIN STACK</span></div>
                 <div className='relative flex flex-row gap-3 xl:gap-6 overflow-visible '>
-                  <div className='relative flex justify-end items-center group h-12 w-12 xl:h-16 xl:w-16 bg-green-200 rounded-md bg-[#403D3D] flex justify-center items-center  w-20'>
-                    <Icon className=" w-[75%] h-[75%]" icon="logos:react" />
-                    <span className="inline-block font-cinetype absolute scale-0 group-hover:scale-100 -top-10 z-10 py-2 px-3 text-sm font-medium text-white bg-graye rounded-lg shadow-sm duration-300 tooltip">
-                      ReactJs
-                      <div className="tooltip-arrow" data-popper-arrow></div>
-                    </span>
-                  </div>
-                  <div className='relative flex justify-end group items-center h-12 w-12 xl:h-16 xl:w-16 bg-green-200 rounded-md bg-[#403D3D] flex justify-center items-center  w-20'>
-                    <Icon className=" w-[75%] h-[75%] text-white" icon="cib:next-js" />
-                    <span className="inline-block font-cinetype absolute scale-0 group-hover:scale-100 -top-10 z-10 py-2 px-3 text-sm font-medium text-white bg-graye rounded-lg shadow-sm duration-300 tooltip">
-                      NextJs
-                      <div className="tooltip-arrow" data-popper-arrow></div>
-                    </span>
-                  </div>
-                  <div className='relative flex justify-end group items-center h-12 w-12 xl:h-16 xl:w-16 bg-green-200 rounded-md bg-[#403D3D] flex justify-center items-center  w-20'>
-                    <Icon className=" w-[75%] h-[75%] rounded-sm" icon="logos:javascript" />
-                    <span className="inline-block font-cinetype absolute scale-0 group-hover:scale-100 -top-10 z-10 py-2 px-3 text-sm font-medium text-white bg-graye rounded-lg shadow-sm duration-300 tooltip">
-                      Javascript
-                      <div className="tooltip-arrow" data-popper-arrow></div>
-                    </span>
-                  </div>
-                  <div className='relative flex justify-end group items-center h-12 w-12 xl:h-16 xl:w-16 bg-green-200 rounded-md bg-[#403D3D] flex justify-center items-center  w-20'>
-                    <Icon className=" w-[75%] h-[75%] rounded-sm" icon="logos:typescript-icon" />
-                    <span className="inline-block font-cinetype absolute scale-0 group-hover:scale-100 -top-10 z-10 py-2 px-3 text-sm font-medium text-white bg-graye rounded-lg shadow-sm duration-300 tooltip">
-                      Typescript
-                      <div className="tooltip-arrow" data-popper-arrow></div>
-                    </span>
-                  </div>
-                  <div className='relative flex justify-end group items-center h-12 w-12 xl:h-16 xl:w-16 bg-green-200 rounded-md bg-[#403D3D] flex justify-center items-center  w-20'>
-                    <Icon className=" w-[75%] h-[75%] rounded-sm" icon="logos:redux" />
-                    <span className="inline-block font-cinetype absolute scale-0 group-hover:scale-100 -top-10 z-10 py-2 px-3 text-sm font-medium text-white bg-graye rounded-lg shadow-sm duration-300 tooltip">
-                      Redux
-                      <div className="tooltip-arrow" data-popper-arrow></div>
-                    </span>
-                  </div>
-                  <div className='relative flex justify-end group items-center h-12 w-12 xl:h-16 xl:w-16 bg-green-200 rounded-md bg-[#403D3D] flex justify-center items-center  w-20'>
-                    <Icon className=" w-[75%] h-[75%]" icon="logos:tailwindcss-icon" />
-                    <span className="inline-block absolute scale-0 group-hover:scale-100 -top-10 z-10 py-2 px-3 text-sm font-medium text-white bg-graye rounded-lg shadow-sm duration-300 tooltip">
-                      TailwindCss
-                      <div className="tooltip-arrow" data-popper-arrow></div>
-                    </span>
-                  </div>
-                  <div className='flex justify-end items-center group h-12 w-12 xl:h-16 xl:w-16 bg-green-200 rounded-md bg-[#403D3D] flex justify-center items-center  w-20'>
-                    <Icon className=" w-[75%] h-[75%]" icon="logos:figma" />
-                    <span className="inline-block font-cinetype absolute scale-0 group-hover:scale-100 -top-10 z-10 py-2 px-3 text-sm font-medium text-white bg-graye rounded-lg shadow-sm duration-300 tooltip">
-                      Figma
-                      <div className="tooltip-arrow" data-popper-arrow></div>
-                    </span>
-                  </div>
+                  {
+                    MainStack.map((stack, index) => (
+                      stack.name == "Javascript" || stack.name == "Typescript" ?
+                        <div key={index} className='relative flex justify-end items-center group h-12 w-12 xl:h-16 xl:w-16 rounded-md bg-[#403D3D] flex justify-center items-center  w-20'>
+                          <Icon className=" w-[75%] h-[75%] rounded-md" icon={stack.Icon} />
+                          <span className="inline-block font-cinetype absolute scale-0 group-hover:scale-100 -top-10 z-10 py-2 px-3 text-sm font-medium text-white bg-graye rounded-lg shadow-sm duration-300 tooltip">
+                            {stack.name}
+                            <div className="tooltip-arrow" data-popper-arrow></div>
+                          </span>
+                        </div> : stack.name == "NextJs" ? <div key={index} className='relative flex justify-end items-center group h-12 w-12 xl:h-16 xl:w-16 rounded-md bg-[#403D3D] flex justify-center items-center  w-20'>
+                          <Icon className=" w-[75%] h-[75%]" icon={stack.Icon} color="white" />
+                          <span className="inline-block font-cinetype absolute scale-0 group-hover:scale-100 -top-10 z-10 py-2 px-3 text-sm font-medium text-white bg-graye rounded-lg shadow-sm duration-300 tooltip">
+                            {stack.name}
+                            <div className="tooltip-arrow" data-popper-arrow></div>
+                          </span>
+                        </div> : <div key={index} className='relative flex justify-end items-center group h-12 w-12 xl:h-16 xl:w-16 rounded-md bg-[#403D3D] flex justify-center items-center  w-20'>
+                          <Icon className=" w-[75%] h-[75%]" icon={stack.Icon} />
+                          <span className="inline-block font-cinetype absolute scale-0 group-hover:scale-100 -top-10 z-10 py-2 px-3 text-sm font-medium text-white bg-graye rounded-lg shadow-sm duration-300 tooltip">
+                            {stack.name}
+                            <div className="tooltip-arrow" data-popper-arrow></div>
+                          </span>
+                        </div>
+                    ))
+                  }
                 </div>
               </div>
             </div>

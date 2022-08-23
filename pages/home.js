@@ -15,8 +15,9 @@ import ProjectsSection from '../components/Projects/Projects';
 import { useInView } from 'react-intersection-observer';
 
 const HeroPart = () => {
+  const homeRef = useRef();
   const aboutRef = useRef();
-  
+
   return (
     <>
       <Head>
@@ -28,10 +29,10 @@ const HeroPart = () => {
         <link rel="icon" href="/Icon.png" />
       </Head>
       <Fullpage >
-        <HeaderSection />
+        <HeaderSection topRef={homeRef} />
         <FullPageSections  >
           <FullpageSection className="h-screen" >
-            <HomeSection resultRef={aboutRef} />
+            <HomeSection ref={homeRef} resultRef={aboutRef} />
           </FullpageSection>
           <FullpageSection className="h-screen" >
             <AboutSection ref={aboutRef} />

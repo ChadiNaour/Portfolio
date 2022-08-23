@@ -34,9 +34,8 @@ const RoundedButton = styled(motion.div)`
     }
 `
 
-const HomeSection = ({ resultRef }) => {
+const HomeSection = ( {resultRef} ) => {
 
-    const AboutRef = React.createRef();
 
     const placeholderText = [
         { type: "heading1", text: "I am Chadi Naour" },
