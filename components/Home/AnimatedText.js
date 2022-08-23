@@ -52,39 +52,37 @@ const AnimatedText = (props) => {
   const Tag = tagMap[props.type];
 
   return (
-    <Tag className="flex p-0 justify-center text-center items-center m-0 sm:my-0 lg:my-3 xl:my-4">
+    <Tag className="flex p-0 justify-center text-center items-center m-0 sm:my-0 md:my-2 lg:my-3 xl:my-4">
       {words.map((word, index) => {
         return (
           // Wrap each word in the Wrapper component
-          <>
-            <Wrapper key={index} className="flex justify-center items-center text-center">
-              {words[index].flat().map((element, index) => {
-                return (
-                  <span
-                    className="overflow-hidden inline-block flex justify-center items-center"
-                    key={index}
-                  >
-                    {!props.icon ?
-                      <motion.span
-                        style={{ display: "inline-block", userSelect: "none" }}
-                        variants={item}
-                        className='font-cinetype py-1 text-center text-2xl xs:text-3xl   md:text-4xl lg:text-5xl xl:text-6xl 3xl:text-7xl z-10'
-                      >
-                        {element}
-                      </motion.span> :
-                      <motion.span
-                        style={{ display: "inline-block", userSelect: "none" }}
-                        variants={item}
-                        className='m-0 flex justify-center items-center  p-0 font-cinetype py-1 text-4xl  xs:text-5xl lg:text-6xl mt-2 xl:text-7xl z-10'
-                      >
-                        {element}
-                      </motion.span>
-                    }
-                  </span>
-                );
-              })}
-            </Wrapper>
-          </>
+          <Wrapper key={index} className="flex justify-center items-center text-center">
+            {word.flat().map((element, index) => {
+              return (
+                <span
+                  className="overflow-hidden inline-block flex justify-center items-center"
+                  key={index}
+                >
+                  {!props.icon ?
+                    <motion.span
+                      style={{ display: "inline-block", userSelect: "none" }}
+                      variants={item}
+                      className='font-cinetype py-1 text-center text-2xl xs:text-3xl   md:text-[2.5em] lg:text-[3rem] xl:text-6xl 3xl:text-7xl z-10'
+                    >
+                      {element}
+                    </motion.span> :
+                    <motion.span
+                      style={{ display: "inline-block", userSelect: "none" }}
+                      variants={item}
+                      className='m-0 flex justify-center items-center  p-0 font-cinetype py-1 text-4xl  xs:text-5xl lg:text-6xl mt-2 xl:text-7xl z-10'
+                    >
+                      {element}
+                    </motion.span>
+                  }
+                </span>
+              );
+            })}
+          </Wrapper>
         );
       })}
       {/* {} */}

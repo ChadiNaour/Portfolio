@@ -75,7 +75,7 @@ export default function Home() {
           name="description"
           content="I am Naour Chadi, a front-end developer"
         />
-        <link rel="icon" href="/my.ico" />
+        <link rel="icon" href="/Icon.png" />
       </Head>
       <AnimatePresence className={styles.container}>
         <motion.div initial={{ opacity: 0 }}
@@ -132,7 +132,7 @@ export default function Home() {
                     color: "white",
                     transition: "linear",
                 }}
-                  ><Icon icon="akar-icons:arrow-right" width={22} height={22} /></RoundedButton>
+                  ><Icon icon="akar-icons:arrow-right" className='w-4 h-4 md:h-5 md:w-5'/></RoundedButton>
               </Link>
             </motion.div>
           </motion.div>

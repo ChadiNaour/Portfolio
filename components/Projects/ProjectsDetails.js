@@ -17,7 +17,7 @@ const ProjectsDetails = [
             },
             {
                         name: "Hypertube",
-                        description: "Movie streaming web app provides searching for movies , showing their IMDB Infos and watching them",
+                        description: "Netflix-like web app provides searching for movies, showing their IMDB data and watching them",
                         image: "/hyper.png",
                         stack: [{icon: "akar-icons:react-fill", name:"ReactJs"}, {icon: "akar-icons:redux-fill", name:"Redux"}, {icon: "simple-icons:tailwindcss", name:"TailwindCss"}, {icon: "akar-icons:node-fill", name:"NodeJs"}, {icon: "fontisto:mysql", name:"MySql"}],
                         color: 'bg-green-300',
@@ -33,7 +33,7 @@ const ProjectsDetails = [
             },
             {
                         name: "Wolf 3D",
-                        description: "A graphic project that lets you turn binary text maps to live and move through them in a smooth way",
+                        description: "A graphic project that lets you turn text maps to live and move through them in a smooth way",
                         image: "/wolf3d.png",
                         stack: [{icon:"cib:coreui-c" ,name:"C language"}, {icon: "vscode-icons:file-type-sdlang", name:"Simple DirectMedia Layer"}],
                         color: 'bg-green-400',

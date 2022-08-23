@@ -77,24 +77,26 @@ const HomeSection = ({ resultRef }) => {
 
     return (
         <motion.section className="h-full relative flex z-10  w-full flex flex-col justify-center items-center overflow-hidden ">
-            <motion.div initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{
-                    opacity: { ease: "linear" },
-                    delay: 1,
-                    duration: 1
-                }}
-                className="absolute  flex justify-center items-end   top-0 left-0 ml-6 md:ml-8 lg:ml-10 h-1/4 3xl:h-1/5">
-                <div className='hidden  sm:block absolute font-reloadLight  text-white text-lg  md:text-lg pl-6 md:pl-6 z-10 pt-4 -rotate-90' style={{ userSelect: "none" }}>home</div>
-            </motion.div>
-            <motion.div initial={{ height: 0 }}
-                animate={{ height: "60vh" }}
-                transition={{
-                    opacity: { ease: "linear" },
-                    delay: 1,
-                    duration: 1
-                }} className="hidden sm:block  absolute z-10 top-1/4 3xl:top-[20%] left-0  w-10  bottom-10 ml-7 md:ml-8 lg:ml-10 border-l-[1px] border-white">
-            </motion.div>
+            <div className='hidden lg:flex'>
+                <motion.div initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{
+                        opacity: { ease: "linear" },
+                        delay: 1,
+                        duration: 1
+                    }}
+                    className="absolute  flex justify-center items-end   top-0 left-0 ml-6 md:ml-8 lg:ml-10 h-1/4 3xl:h-1/5">
+                    <div className='hidden  sm:block absolute font-reloadLight  text-white text-lg  md:text-lg pl-6 md:pl-6 z-10 pt-4 -rotate-90' style={{ userSelect: "none" }}>home</div>
+                </motion.div>
+                <motion.div initial={{ height: 0 }}
+                    animate={{ height: "60vh" }}
+                    transition={{
+                        opacity: { ease: "linear" },
+                        delay: 1,
+                        duration: 1
+                    }} className="hidden sm:block  absolute z-10 top-1/4 3xl:top-[20%] left-0  w-10  bottom-10 ml-7 md:ml-8 lg:ml-10 border-l-[1px] border-white">
+                </motion.div>
+            </div>
 
             <motion.div
                 initial="hidden"
@@ -134,13 +136,13 @@ const HomeSection = ({ resultRef }) => {
                 }}
             >HI</div>
             <div className="absolute  pb-8 pt-2 flex justify-center items-center left-0 bottom-0 w-full text-md lg:text-xl  select-none" >
-                <RoundedButton onClick={() => scrollToSection()} 
-                whileHover={{
-                    scale: 1.1,
-                    backgroundColor: "white",
-                    color: "black",
-                }}
-                ><Icon icon="akar-icons:arrow-down" width={22} height={22} /></RoundedButton>
+                <RoundedButton onClick={() => scrollToSection()}
+                    whileHover={{
+                        scale: 1.1,
+                        backgroundColor: "white",
+                        color: "black",
+                    }}
+                ><Icon icon="akar-icons:arrow-down" className='w-4 h-4 md:h-5 md:w-5' /></RoundedButton>
             </div>
         </motion.section>
     )

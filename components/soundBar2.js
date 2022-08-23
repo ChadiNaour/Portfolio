@@ -47,10 +47,10 @@ margin:0 0.1rem
 const SoundBar = () => {
     return (
         <Box>
-            <Line/>
-            <Line/>
-            <Line/>
-            <Line/>
+            <Line />
+            <Line />
+            <Line />
+            <Line />
         </Box>
     )
 }
