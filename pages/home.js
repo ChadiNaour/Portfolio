@@ -21,7 +21,7 @@ const HeroPart = () => {
   return (
     <>
       <Head>
-        <title>Nchadi</title>
+        <title>Chadi Naour's Portfolio</title>
         <meta
           name="description"
           content="I am Naour Chadi, a front-end developer"

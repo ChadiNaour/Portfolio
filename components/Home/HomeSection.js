@@ -85,7 +85,7 @@ const HomeSection = ( {resultRef} ) => {
                         duration: 1
                     }}
                     className="absolute  flex justify-center items-end   top-0 left-0 ml-6 md:ml-8 lg:ml-10 h-1/4 3xl:h-1/5">
-                    <div className='hidden  sm:block absolute font-reloadLight  text-white text-lg  md:text-lg pl-6 md:pl-6 z-10 pt-4 -rotate-90' style={{ userSelect: "none" }}>home</div>
+                    <div className='hidden  sm:block absolute font-reloadLight  text-white text-md pl-6 md:pl-6 z-10 pt-4 -rotate-90' style={{ userSelect: "none" }}>home</div>
                 </motion.div>
                 <motion.div initial={{ height: 0 }}
                     animate={{ height: "60vh" }}
@@ -93,7 +93,7 @@ const HomeSection = ( {resultRef} ) => {
                         opacity: { ease: "linear" },
                         delay: 1,
                         duration: 1
-                    }} className="hidden sm:block  absolute z-10 top-1/4 3xl:top-[20%] left-0  w-10  bottom-10 ml-7 md:ml-8 lg:ml-10 border-l-[1px] border-white">
+                    }} className="hidden sm:block  absolute z-10 top-1/4 3xl:top-[20%] left-0  w-10  bottom-10 ml-7 md:ml-8 lg:ml-10 border-l-[.5px] border-white">
                 </motion.div>
             </div>
 

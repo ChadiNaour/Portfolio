@@ -70,7 +70,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Nchadi</title>
+        <title>Chadi Naour's Portfolio</title>
         <meta
           name="description"
           content="I am Naour Chadi, a front-end developer"
@@ -131,8 +131,8 @@ export default function Home() {
                     backgroundColor: "black",
                     color: "white",
                     transition: "linear",
-                }}
-                  ><Icon icon="akar-icons:arrow-right" className='w-4 h-4 md:h-5 md:w-5'/></RoundedButton>
+                  }}
+                ><Icon icon="akar-icons:arrow-right" className='w-4 h-4 md:h-5 md:w-5' /></RoundedButton>
               </Link>
             </motion.div>
           </motion.div>

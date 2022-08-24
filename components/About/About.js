@@ -93,13 +93,25 @@ const AboutSection = forwardRef((props, AboutRef) => {
       <div ref={ref} className="hidden lg:flex">
         <motion.div animate={animation} initial="hidden" variants={typeVariants}
           className="absolute  flex justify-center items-end   top-0 left-0 ml-6 md:ml-8 lg:ml-10 h-1/4 3xl:h-1/5">
-          <div className='hidden  sm:block absolute font-reloadLight  text-white text-lg  md:text-lg pl-6 md:pl-6 z-10 pt-4 -rotate-90' style={{ userSelect: "none" }}>about</div>
+          <div className='hidden  sm:block absolute font-reloadLight  text-white text-md pl-6 md:pl-6 z-10 pt-4 -rotate-90' style={{ userSelect: "none" }}>about</div>
         </motion.div>
         <motion.div animate={animation1} initial="hidden" variants={lineVariants}
-          className="hidden sm:block  absolute z-10 top-1/4 3xl:top-[20%] left-0  w-10  bottom-10 ml-7 md:ml-8 lg:ml-10 border-l-[1px] border-white">
+          className="hidden sm:block  absolute z-10 top-1/4 3xl:top-[20%] left-0  w-10  bottom-10 ml-7 md:ml-8 lg:ml-10 border-l-[0.5px] border-white">
         </motion.div>
       </div>
-      <div className='hidden sm:block  absolute z-0 mx-auto p-0 font-timmons md:text-6xl'
+      <div className='hidden sm:block  absolute z-0 mx-auto p-0 font-timmons lg:text-6xl'
+        style={{
+          fontSize: "calc(var(--vh, 1vh) * 95)",
+          color: "#181818",
+          left: "50%",
+          top: "50%",
+          transform: "translate(-50%, -50%)",
+          transition: "0.5s opacity",
+          willChange: "transform",
+          userSelect: "none",
+        }}
+      >ABOUT&nbsp;ME</div>
+      {/* <div className='lg:hidden sm:block  absolute z-0 mx-auto p-0 font-timmons md:text-6xl'
         style={{
           fontSize: "calc(var(--vh, 1vh) * 97)",
           color: "#181818",
@@ -110,7 +122,7 @@ const AboutSection = forwardRef((props, AboutRef) => {
           willChange: "transform",
           userSelect: "none",
         }}
-      >ABOUT&nbsp;ME</div>
+      >ABOUT</div> */}
       <div className='block absolute z-0 mx-auto p-0 font-timmons md:text-6xl sm:hidden'
         style={{
           fontSize: "calc(var(--vh, 1vh) * 85)",
@@ -127,34 +139,32 @@ const AboutSection = forwardRef((props, AboutRef) => {
         {/* left container */}
         <div className='p-4 md:pr-8 flex  flex-col  w-full lg:w-2/3'>
           <div className="w-full h-full relative flex flex-col items-start justify-center ">
-            <div className='font-cinetype text-3xl xl:text-4xl 2xl:text-5xl mb-1 md:mb-3' style={{ color: "transparent", WebkitTextStroke: "0.02em #fff" }}>HI THERE</div>
-            <div className='font-cinetype text-left text-xl sm:text-2xl xl:text-3xl 2xl:text-4xl  text-white leading-tight md:text-xl md:leading-tight lg:leading-tight xl:leading-tight 2xl:leading-tight tracking-wider mb-2 md:mb-6'>I'm a passionate Front-end web developer, I specialize in designing and developing clean, functional and interactive user experiences, I'm quietly confident, fast learner, and perpetually working on improving myself.</div>
-            <div className='md:hidden w-full flex flex-row text-white font-reloadLight underline mb-4'>see my Main Stack</div>
+            <div className='font-cinetype text-2xl md:text-3xl xl:text-4xl 2xl:text-5xl md:mb-1 xl:mb-2' style={{ color: "transparent", WebkitTextStroke: "0.02em #fff" }}>HI THERE</div>
+            <div className='font-cinetype text-left text-lg sm:text-2xl xl:text-3xl 2xl:text-4xl  text-white leading-tight md:text-xl md:leading-tight lg:leading-tight xl:leading-tight 2xl:leading-tight tracking-wider mb-2 xl:mb-6'>I'm a passionate Front-end web developer, I specialize in designing and developing clean, functional and interactive user experiences, I'm quietly confident, fast learner, and perpetually working on improving myself.</div>
+            {/* main stack responsive */}
+            <div className='lg:hidden w-full flex flex-row text-white font-reloadLight underline mb-3'>see my Main Stack</div>
             {/* main stack */}
-            <div className='hidden md:flex md:w-full md:pr-8'>
-              <div className='w-full flex justify-between px-4 xl:px-6 h-16 xl:px-8 xl:h-20  bg-gradient-to-b from-[#312E2E] to-[#403D3D] mb-7 rounded-md flex flex-row items-center shadow-md'>
+            <div className='hidden md:flex md:w-full md:pr-8 mb-2 xl:mb-8'>
+              <div className='w-full flex justify-between h-16 xl:px-8 xl:h-20 px-[5%]  bg-gradient-to-b from-[#312E2E] to-[#403D3D] rounded-md items-center shadow-md'>
                 <div className='flex justify-center items-center   h-full'><span className='text-white font-reloadLight text-sm md:text-md xl:text-xl 2xl:text-2xl'>MAIN STACK</span></div>
-                <div className='relative flex flex-row gap-3 xl:gap-6 overflow-visible '>
+                <div className='relative flex flex-row max-w-[80%] gap-3 2xl:gap-6 overflow-visible '>
                   {
                     MainStack.map((stack, index) => (
                       stack.name == "Javascript" || stack.name == "Typescript" ?
-                        <div key={index} className='relative flex justify-end items-center group h-12 w-12 xl:h-16 xl:w-16 rounded-md bg-[#403D3D] flex justify-center items-center  w-20'>
-                          <Icon className=" w-[75%] h-[75%] rounded-md" icon={stack.Icon} />
-                          <span className="inline-block font-cinetype absolute scale-0 group-hover:scale-100 -top-10 z-10 py-2 px-3 text-sm font-medium text-white bg-graye rounded-lg shadow-sm duration-300 tooltip">
+                        <div key={index} className='relative z-50 cursor-pointer flex justify-end items-center group h-12 w-12 xl:h-16 xl:w-16 rounded-md bg-[#403D3D] flex justify-center items-center  w-20'>
+                          <Icon className="w-[75%] h-[75%] rounded-md" icon={stack.Icon} />
+                          <span className="absolute z-50 inline-block font-cinetype scale-0 group-hover:scale-100 -top-10 py-2 px-3 text-sm font-medium text-white bg-graye rounded-lg shadow-sm duration-300 ">
                             {stack.name}
-                            <div className="tooltip-arrow" data-popper-arrow></div>
                           </span>
-                        </div> : stack.name == "NextJs" ? <div key={index} className='relative flex justify-end items-center group h-12 w-12 xl:h-16 xl:w-16 rounded-md bg-[#403D3D] flex justify-center items-center  w-20'>
+                        </div> : stack.name == "NextJs" ? <div key={index} className='relative  z-50 cursor-pointer flex justify-end items-center group h-12 w-12 xl:h-16 xl:w-16 rounded-md bg-[#403D3D] flex justify-center items-center  w-20'>
                           <Icon className=" w-[75%] h-[75%]" icon={stack.Icon} color="white" />
-                          <span className="inline-block font-cinetype absolute scale-0 group-hover:scale-100 -top-10 z-10 py-2 px-3 text-sm font-medium text-white bg-graye rounded-lg shadow-sm duration-300 tooltip">
+                          <span className="absolute z-50 inline-block font-cinetype scale-0 group-hover:scale-100 -top-10 py-2 px-3 text-sm font-medium text-white bg-graye rounded-lg shadow-sm duration-300 ">
                             {stack.name}
-                            <div className="tooltip-arrow" data-popper-arrow></div>
                           </span>
-                        </div> : <div key={index} className='relative flex justify-end items-center group h-12 w-12 xl:h-16 xl:w-16 rounded-md bg-[#403D3D] flex justify-center items-center  w-20'>
+                        </div> : <div key={index} className='relative cursor-pointer  z-50 flex justify-end items-center group h-12 w-12 xl:h-16 xl:w-16 rounded-md bg-[#403D3D] flex justify-center items-center  w-20'>
                           <Icon className=" w-[75%] h-[75%]" icon={stack.Icon} />
-                          <span className="inline-block font-cinetype absolute scale-0 group-hover:scale-100 -top-10 z-10 py-2 px-3 text-sm font-medium text-white bg-graye rounded-lg shadow-sm duration-300 tooltip">
+                          <span className="absolute z-50 inline-block font-cinetype scale-0 group-hover:scale-100 -top-10 py-2 px-3 text-sm font-medium text-white bg-graye rounded-lg shadow-sm duration-300 ">
                             {stack.name}
-                            <div className="tooltip-arrow" data-popper-arrow></div>
                           </span>
                         </div>
                     ))
@@ -180,19 +190,19 @@ const AboutSection = forwardRef((props, AboutRef) => {
           </div>
         </div>
         {/* right container */}
-        <div className="md:flex md:flex-col lg:mt-0  md:justify-center md:items-center md:h-full md:w-full lg:w-1/3 ">
+        <div className=" lg:flex lg:flex-col lg:mt-0 lg:justify-center lg:items-center lg:h-full md:w-full lg:w-1/3 ">
           <div className='flex flex-col justify-center items-center relative h-auto w-full '>
             {/* emoji div */}
-            <div className="-mt-8 sm:-mt-16 2xl:-mt-24 relative w-72 h-72 md:w-[21rem] md:h-[21rem] xl:w-[430px] xl:h-[430px]  2xl:w-[490px] 2xl:h-[500px] ">
+            <div className="-mt-8 sm:-mt-16 2xl:-mt-24 relative w-72 h-72 md:w-[21rem] md:h-[21.5rem] xl:w-[430px] xl:h-[440px]  2xl:w-[490px] 2xl:h-[500px] ">
               <Image layout="fill" src={Memoji} className="hidden" />
             </div>
             {/* glass card */}
-            <div className='-mt-7 2xl:-mt-10 px-10 xl:-mt-10 2xl:-mt-12 bg-white bg-opacity-20 backdrop-blur-sm rounded-lg drop-shadow-lg w-72 sm:w-80 2xl:w-96 h-28 xl:h-28 2xl:h-40 flex justify-center items-center'>
+            <div className='-mt-8 xl:-mt-11 px-10 xl:-mt-10 2xl:-mt-12 bg-white bg-opacity-20 backdrop-blur-sm rounded-lg drop-shadow-lg w-72 sm:w-80 xl:w-96 h-28 xl:h-36 2xl:h-40 flex justify-center items-center'>
               <svg className="absolute top-2 left-2 opacity-20 w-6 xl:w-8" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M3.69094 6.292C5.09394 4.771 7.21694 4 9.99994 4H10.9999V6.819L10.1959 6.98C8.82594 7.254 7.87294 7.793 7.36294 8.584C7.09683 9.01013 6.94591 9.49804 6.92494 10H9.99994C10.2652 10 10.5195 10.1054 10.707 10.2929C10.8946 10.4804 10.9999 10.7348 10.9999 11V18C10.9999 19.103 10.1029 20 8.99994 20H2.99994C2.73472 20 2.48037 19.8946 2.29283 19.7071C2.1053 19.5196 1.99994 19.2652 1.99994 19V14L2.00294 11.081C1.99394 10.97 1.80394 8.34 3.69094 6.292ZM19.9999 20H13.9999C13.7347 20 13.4804 19.8946 13.2928 19.7071C13.1053 19.5196 12.9999 19.2652 12.9999 19V14L13.0029 11.081C12.9939 10.97 12.8039 8.34 14.6909 6.292C16.0939 4.771 18.2169 4 20.9999 4H21.9999V6.819L21.1959 6.98C19.8259 7.254 18.8729 7.793 18.3629 8.584C18.0968 9.01013 17.9459 9.49804 17.9249 10H20.9999C21.2652 10 21.5195 10.1054 21.707 10.2929C21.8946 10.4804 21.9999 10.7348 21.9999 11V18C21.9999 19.103 21.1029 20 19.9999 20Z" fill="#D9D9D9" />
               </svg>
               <div className="flex justify-center items-center relative transition ease-in-out mt-4">
-                <span className='text-sm 2xl:text-xl text-white font-cinetype mb-5   transition ease-in-out duration-300'>{displayedQuote.text}</span>
+                <span className='text-sm xl:text-lg 2xl:text-xl text-white font-cinetype mb-5   transition ease-in-out duration-300'>{displayedQuote.text}</span>
                 <span className="absolute text-xs xl:text-md text-white right-0 -bottom-2 uppercase  transition ease-in-out duration-300">— {displayedQuote.author}</span>
               </div>
               <svg className="absolute top-2 right-2 opacity-20 w-6 xl:w-8" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
