@@ -93,7 +93,7 @@ const HomeSection = ( {resultRef} ) => {
                         opacity: { ease: "linear" },
                         delay: 1,
                         duration: 1
-                    }} className="hidden sm:block  absolute z-10 top-1/4 3xl:top-[20%] left-0  w-10  bottom-10 ml-7 md:ml-8 lg:ml-10 border-l-[.5px] border-white">
+                    }} className="hidden sm:block  absolute z-10 top-1/4 3xl:top-[20%] left-0  w-10  bottom-10 ml-7 md:ml-8 lg:ml-10 border-l-[1px] border-white">
                 </motion.div>
             </div>
 
@@ -116,7 +116,7 @@ const HomeSection = ( {resultRef} ) => {
                     position: "absolute",
                     top: "50%",
                     transform: "translate(-50%, -50%)",
-                    transition: "0.5s opacity",
+                    transition: "0.1s opacity",
                     willChange: "transform",
                     userSelect: "none",
                 }}

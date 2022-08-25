@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import styled, { keyframes } from 'styled-components'
 
 import music from "../public/music.mp3"
@@ -54,13 +54,12 @@ margin:0 0.11rem;
 }
 `
 
-const SoundBar = () => {
-    const [click, setClick] = useState(false);
+const SoundBar = ({ music }) => {
+    const [click, setClick] = useState(music !== "0" ? true : false);
     const ref = useRef(null);
 
     const handleClick = () => {
         setClick(!click);
-
         if (!click) {
             ref.current.play();
         } else {
@@ -76,7 +75,7 @@ const SoundBar = () => {
             <Line click={click} />
 
 
-            <audio src={music} ref={ref} loop/>
+            <audio src={music} ref={ref} loop />
         </Box>
     )
 }

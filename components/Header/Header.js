@@ -3,26 +3,17 @@ import SoundBar from '../soundBar';
 import { motion, useAnimation, useTransform } from "framer-motion";
 
 
-const HeaderSection = ({topRef}) => {
+const HeaderSection = ({music}) => {
 
     const scrolToTop = () => {
-        // window.scroll({
-        //     top: topRef.current.offsetTop,
-        //     behavior: 'smooth'
-        // })
         window.scrollTo(0, 0, 'smooth')
-        // window.scrollTo({
-        //     top: 0,
-        //     behavior: "smooth"
-        //   });
-
     }
     return (
         <header className="d-flex justify-center align-center fixed z-20 top-0 left-0 w-full text-center pt-5 lg:pt-8" style={{ backgroundImage: "linear-gradient(to bottom,#000 0%,rgba(0,0,0,0) 100%)" }}>
             <div className="relative  mx-0 my-auto px-0 py-auto w-full  flex justify-center">
                 <span onClick={() => {scrolToTop()}} className='cursor-pointer font-reloadNormal text-2xl md:text-3xl xl:text-[2.2em] text-white  select-none mt-1'>NCHADI</span>
                 <div className="absolute top-0 left-0  ml-4 md:ml-8 lg:ml-10 flex justify-center h-full w-12 items-center">
-                    <SoundBar />
+                    <SoundBar music={music}/>
                 </div>
                 <div className="absolute flex flex-row flex justify-center h-full items-center  top-0 right-0 w-auto mr-4 md:mr-8 lg:mr-10 ">
                     {/* right */}

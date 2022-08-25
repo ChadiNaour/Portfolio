@@ -71,7 +71,6 @@ const ProjectsSection = ({ }) => {
     }
 
     useEffect(() => {
-        console.log("projects in view", inView1);
         if (inView1) {
             animation2.start("visible");
             animation3.start("visible");
@@ -91,7 +90,7 @@ const ProjectsSection = ({ }) => {
                     <div className='hidden  sm:block absolute font-reloadLight  text-white text-md pl-6 md:pl-6 z-10 pt-4 -rotate-90' style={{ userSelect: "none" }}>Work</div>
                 </motion.div>
                 <motion.div animate={animation3} initial="hidden" variants={lineVariants}
-                    className="hidden sm:block  absolute z-10 top-1/4 3xl:top-[20%] left-0  w-10  bottom-10 ml-7 md:ml-8 lg:ml-10 border-l-[0.5px] border-white">
+                    className="hidden sm:block  absolute z-10 top-1/4 3xl:top-[20%] left-0  w-10  bottom-10 ml-7 md:ml-8 lg:ml-10 border-l-[1px] border-white">
                 </motion.div>
             </div>
             <div className='hidden sm:block  absolute z-0 mx-auto p-0 font-timmons md:text-6xl'
@@ -120,7 +119,7 @@ const ProjectsSection = ({ }) => {
             >PROJECTS</div>
             <Swiper className="mySwiper cursor-grab">
                 {Projects.map((project, index) => (
-                    <SwiperSlide>
+                    <SwiperSlide key={index}>
                         <div className={`w-screen h-full flex justify-center z-20 items-center`}>
                             <div className='w-[90%] h-3/4 md:w-[90vw] lg:w-4/5 xl:w-3/5 md:h-[45vh] lg:h-1/2 z-20 rounded-md md:rounded-lg relative flex flex-col items-center shadow-2xl' key={index} style={{ backgroundColor: "#2B2B2B" }}>
                                 <div className="h-[10%] md:h-1/6 xl:h-1/5 w-full ">
@@ -135,7 +134,7 @@ const ProjectsSection = ({ }) => {
                                         <span className='text-gray-50 text-center md:text-left font-cinetype text-xl md:text-xl  lg:text-2xl xl:text-[1.7rem] px-3 md:px-0 md:ml-6 xl:ml-12 leading-normal md:leading-normal lg:leading-norm xl:leading-normal 2xl:leading-normal tracking-wider'>{project.description}</span>
                                         <div className="w-auto z-50  flex flex-row gap-3 md:gap-5 justify-center md:justify-start  items-center md:ml-6 xl:ml-12 mt-4 md:mt-3 lg:mt-5 xl:mt-6">
                                             {project.stack.map((stack, index) => (
-                                                <div className='w-auto z-50 relative group cursor-pointer flex justify-center items-center' >
+                                                <div key={index} className='w-auto z-50 relative group cursor-pointer flex justify-center items-center' >
                                                     {stack.name !== "Simple DirectMedia Layer" ? <Icon className='z-50 h-8 w-8 lg:h-10 lg:w-10' key={index} icon={stack.icon} style={{ color: "white" }} /> : <svg width={40} height={40} xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path fill="white" d="M18.787 27.148H9.672l7.213-18.755h3.454l-5.902 15.345h5.683l-1.333 3.41zM2 19.344l1.2-3.3a4.129 4.129 0 0 0 1.53 1.137a4.89 4.89 0 0 0 1.989.372a5.9 5.9 0 0 0 1.137-.109a3.6 3.6 0 0 0 .9-.306a1.8 1.8 0 0 0 .634-.481a1.685 1.685 0 0 0 .372-.59A1.172 1.172 0 0 0 9.8 15.3a1.66 1.66 0 0 0-.437-.634a5.171 5.171 0 0 0-.809-.568c-.328-.175-.678-.372-1.071-.546a3.814 3.814 0 0 1-1.945-1.771a3.349 3.349 0 0 1 .066-2.514a6.006 6.006 0 0 1 1.18-1.989A6.879 6.879 0 0 1 8.557 5.9a8.121 8.121 0 0 1 2.143-.785a10.318 10.318 0 0 1 2.317-.262a13.481 13.481 0 0 1 2.011.131a5.655 5.655 0 0 1 1.486.437L15.4 8.5a2.5 2.5 0 0 0-.656-.459a4.246 4.246 0 0 0-.787-.328a6 6 0 0 0-.852-.2a6.317 6.317 0 0 0-1.924.066a3.6 3.6 0 0 0-.9.306a2.534 2.534 0 0 0-.678.481a1.834 1.834 0 0 0-.393.612a.992.992 0 0 0-.044.656a1.606 1.606 0 0 0 .35.568a3.877 3.877 0 0 0 .7.525a10.049 10.049 0 0 0 .984.525a7.434 7.434 0 0 1 1.311.787a3.531 3.531 0 0 1 .874.94a2.2 2.2 0 0 1 .328 1.2a4.528 4.528 0 0 1-.306 1.574a5.876 5.876 0 0 1-1.224 2.077a6.589 6.589 0 0 1-1.771 1.355a7.771 7.771 0 0 1-2.142.743a11.943 11.943 0 0 1-2.339.219a12.16 12.16 0 0 1-2.251-.2A5.027 5.027 0 0 1 2 19.344Z" /><path fill="white" d="m17.738 17.2l-1.049 2.71h1.989a10.989 10.989 0 0 0 6.492-2.077a11.394 11.394 0 0 0 4.175-5.53q2.623-7.213-5.268-7.213h-5.246l-.984 2.71h4.984a3.319 3.319 0 0 1 2.995 1.224a3.706 3.706 0 0 1 .022 3.322a7.675 7.675 0 0 1-2.514 3.541a6.179 6.179 0 0 1-3.869 1.313h-1.727" /></svg>}
                                                     <span className="inline-block font-cinetype absolute scale-0 w-auto group-hover:scale-100 -bottom-12 z-50 py-2 px-3 text-sm text-white bg-graye rounded-lg shadow-sm duration-300">
                                                         {stack.name}

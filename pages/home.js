@@ -13,10 +13,13 @@ import HeaderSection from '../components/Header/Header';
 import HomeSection from '../components/Home/HomeSection';
 import ProjectsSection from '../components/Projects/Projects';
 import { useInView } from 'react-intersection-observer';
+import { useRouter } from 'next/router'
 
-const HeroPart = () => {
+const Home = () => {
   const homeRef = useRef();
   const aboutRef = useRef();
+  const router = useRouter();
+ console.log(router);
 
   return (
     <>
@@ -29,7 +32,7 @@ const HeroPart = () => {
         <link rel="icon" href="/Icon.png" />
       </Head>
       <Fullpage >
-        <HeaderSection topRef={homeRef} />
+        <HeaderSection music={router.query.music}/>
         <FullPageSections  >
           <FullpageSection className="h-screen" >
             <HomeSection ref={homeRef} resultRef={aboutRef} />
@@ -46,4 +49,4 @@ const HeroPart = () => {
   );
 }
 
-export default HeroPart;
+export default Home;
