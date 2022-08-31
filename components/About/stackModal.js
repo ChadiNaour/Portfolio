@@ -41,9 +41,9 @@ export default function StackModal({ isOpen, setIsOpen, MainStack }) {
               >
                 <Dialog.Panel className="w-[90%]transform overflow-hidden align-middle shadow-xl transition-all z-50 h-full flex justify-center items-center">
                   <div className="relative w-full h-full flex justify-center items-center">
-                    <div className="bg-[#312E2E] w-[95%] rounded-lg shadow relative">
+                    <div className="bg-[#312E2E] w-[95%] rounded-sm shadow relative">
                       <div className="flex items-center justify-center p-5 ">
-                        <span className='text-white font-reloadLight text-lg text-center'>MAIN STACK</span>
+                        <span className='text-white font-cinetype text-lg text-center'>Main Stack</span>
                       </div>
                       <div className="flex flex-wrap justify-center items-center gap-4 pb-5 ">
                         {

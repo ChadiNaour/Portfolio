@@ -148,21 +148,21 @@ const AboutSection = forwardRef((props, AboutRef) => {
           userSelect: "none",
         }}
       >am</div>
-      <div className='flex justify-center items-center  flex-col lg:flex-row w-full h-full md:w-[90vw] xl:w-[85vw] md:h-[90vh] mt-6 md:mt-0   lg:h-2/3  z-20'>
+      <div className='flex justify-center items-center flex-col lg:flex-row w-full h-full md:w-[90vw] xl:w-[85vw] md:h-[90vh] mt-6 md:mt-8 md:mt-0   lg:h-2/3  z-20'>
         {/* left container */}
         <div className='p-4 md:pr-8 flex  flex-col  w-full lg:w-2/3'>
           <div className="w-full h-full relative flex flex-col items-center lg:items-start justify-center ">
             <div className={`font-cinetype text-[1.6rem] md:text-3xl xl:text-4xl 2xl:text-[2.5rem] md:mb-2 xl:mb-2 ${AboutStyles.AboveText} select-none`} >HI THERE</div>
-            <div className='font-cinetype text-center lg:text-left text-lg sm:text-2xl xl:text-3xl 2xl:text-[2.05rem]  text-white leading-normal md:text-[1.3rem] md:leading-wider lg:leading-tight xl:leading-tight 2xl:leading-normal tracking-tight md:tracking-normal lg:tracking-wide mb-3 xl:mb-6 select-none'>I'm a passionate Front-end web developer, I specialize in designing and developing clean, functional and interactive user experiences, I'm quietly confident, fast learner, and perpetually working on improving myself.</div>
+            <div className='font-cinetype text-center lg:text-left text-lg sm:text-2xl xl:text-3xl 2xl:text-[2.05rem]  text-white leading-normal md:text-[1.3rem] md:leading-wider lg:leading-tight xl:leading-tight 2xl:leading-normal tracking-tight md:tracking-normal lg:tracking-wide mb-3 xl:mb-6 select-none'>I'm a passionate and creative Front-end web developer, I specialize in designing and developing clean, functional and interactive user experiences, I'm quietly confident, fast learner, and perpetually working on improving myself.</div>
             {/* main stack responsive */}
             <button onClick={(e) => {
               e.preventDefault();
               setModal(!modal);
-            }} className='md:hidden hover:text-graye w-full text-center text-white font-reloadLight underline mb-3 cursor-pointer'>see my Main Stack</button>
+            }} className='md:hidden hover:text-graye w-full text-center text-white font-cinetype underline mb-3 cursor-pointer'>See my Main Stack</button>
             {/* main stack */}
             <div className='hidden md:flex md:w-full md:pr-8 mb-4 xl:mb-8'>
-              <div className='w-full flex justify-between h-16 xl:px-8 xl:h-20 px-[5%]  bg-gradient-to-b from-[#312E2E] to-[#403D3D] rounded-md items-center shadow-md'>
-                <div className='flex justify-center items-center   h-full'><span className='text-white font-cinetype text-sm md:text-md xl:text-xl 2xl:text-[1.4rem] select-none'>Main Stack</span></div>
+              <div className='w-full flex justify-between h-16 xl:px-8 xl:h-20 px-[5%]  bg-gradient-to-b from-[#312E2E] to-[#403D3D] rounded-sm items-center shadow-md'>
+                <div className='flex justify-center items-center   h-full'><span className='text-white font-cinetype text-sm md:text-[1.1rem] xl:text-xl 2xl:text-[1.4rem] select-none'>Main Stack</span></div>
                 <div className='relative flex flex-row max-w-[80%] gap-3 2xl:gap-6 overflow-visible '>
                   {
                     MainStack.map((stack, index) => (
@@ -218,7 +218,7 @@ const AboutSection = forwardRef((props, AboutRef) => {
               <Image layout="fill" src={Memoji} className="hidden" />
             </div>
             {/* glass card */}
-            <div className='-mt-8 lg:-mt-9 xl:-mt-12 xl:-mt-10 2xl:-mt-12 bg-white bg-opacity-20 backdrop-blur-sm rounded-lg drop-shadow-lg w-72 sm:w-80 xl:w-96 h-28 xl:h-36 2xl:h-40'>
+            <div className='-mt-8 lg:-mt-9 xl:-mt-11 2xl:-mt-10 2xl:-mt-12 bg-white bg-opacity-20 backdrop-blur-sm rounded-sm drop-shadow-lg w-72 sm:w-80 xl:w-96 h-28 xl:h-36 2xl:h-40'>
               <div className='h-full w-full flex justify-center items-center relative'>
                 {/* quote svgs */}
                 <svg className="absolute top-2 left-2 opacity-20 w-6 xl:w-8" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -228,11 +228,11 @@ const AboutSection = forwardRef((props, AboutRef) => {
                   <path d="M20.3091 6.292C18.9061 4.771 16.7831 4 14.0001 4H13.0001V6.819L13.8041 6.98C15.1741 7.254 16.1271 7.793 16.6371 8.584C16.9032 9.01013 17.0541 9.49804 17.0751 10H14.0001C13.7348 10 13.4805 10.1054 13.293 10.2929C13.1054 10.4804 13.0001 10.7348 13.0001 11V18C13.0001 19.103 13.8971 20 15.0001 20H21.0001C21.2653 20 21.5196 19.8946 21.7072 19.7071C21.8947 19.5196 22.0001 19.2652 22.0001 19V14L21.9971 11.081C22.0061 10.97 22.1961 8.34 20.3091 6.292ZM4.00006 20H10.0001C10.2653 20 10.5196 19.8946 10.7072 19.7071C10.8947 19.5196 11.0001 19.2652 11.0001 19V14L10.9971 11.081C11.0061 10.97 11.1961 8.34 9.30906 6.292C7.90606 4.771 5.78306 4 3.00006 4H2.00006V6.819L2.80406 6.98C4.17406 7.254 5.12706 7.793 5.63706 8.584C5.90317 9.01013 6.05409 9.49804 6.07506 10H3.00006C2.73484 10 2.48049 10.1054 2.29295 10.2929C2.10542 10.4804 2.00006 10.7348 2.00006 11V18C2.00006 19.103 2.89706 20 4.00006 20Z" fill="#D9D9D9" />
                 </svg>
                 {/* quote data */}
-                <div className="absolute flex justify-center items-center  mt-2 w-full px-8  transition ease-in-out">
+                <div className="absolute flex justify-center items-center mt-3  md:mt-4 xl:mt-2 w-full px-8  transition ease-in-out">
                   <span className='text-sm xl:text-lg 2xl:text-xl text-white font-cinetype mb-5 transition ease-in-out duration-300 select-none'>{displayedQuote.text}</span>
                 </div>
                 <div className='absolute bottom-0 right-0 w-1/2 h-10 flex items-center justify-end pr-[5%] pb-[3%]'>
-                  <span className="text-xs xl:text-md text-white uppercase  transition ease-in-out duration-300 select-none">— {displayedQuote.author}</span>
+                  <span className="text-[0.6rem] xl:text-md text-white uppercase  transition ease-in-out duration-300 select-none">— {displayedQuote.author}</span>
                 </div>
               </div>
             </div>
