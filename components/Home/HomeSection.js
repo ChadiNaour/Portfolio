@@ -11,15 +11,21 @@ const RoundedButton = styled(motion.div)`
     justify-content: center;
     align-items: center;
     align-text: center;
-    height: 70px;
+    height: 68px;
     color: white;
     text-size: 6.5rem;
     box-shadow: 0 0 0 0 #fff, inset 0 0 0 1px #fff;
-    width: 70px;
+    width: 68px;
     border-radius: 50%;
     font-family: reload,arial narrow,Arial,Helvetica,sans-serif;
     font-weight: 700;
     cursor: pointer;
+    @media (max-width: 1024px) {
+        height: 65px;
+        width: 65px;
+        text-size: 4.5rem;
+        font-weight: 100;
+    }
     @media (max-width: 768px) {
         height: 60px;
         width: 60px;
@@ -34,7 +40,7 @@ const RoundedButton = styled(motion.div)`
     }
 `
 
-const HomeSection = ( {resultRef} ) => {
+const HomeSection = ({resultRef}) => {
 
 
     const placeholderText = [
@@ -110,7 +116,7 @@ const HomeSection = ( {resultRef} ) => {
             </motion.div>
             <div className='hidden sm:block absolute z-0 mx-auto p-0 font-timmons md:text-3xl'
                 style={{
-                    fontSize: "calc(var(--vh, 1vh) * 95)",
+                    fontSize: "calc(var(--vh, 1vh) * 90)",
                     color: "#181818",
                     left: "50%",
                     position: "absolute",
@@ -134,7 +140,7 @@ const HomeSection = ( {resultRef} ) => {
                     userSelect: "none",
                 }}
             >HI</div>
-            <div className="absolute  pb-8 pt-2 flex justify-center items-center left-0 bottom-0 w-full text-md lg:text-xl  select-none" >
+            <div className="absolute  pb-10 pt-2 flex justify-center items-center left-0 bottom-0 w-full text-md lg:text-xl  select-none" >
                 <RoundedButton onClick={() => scrollToSection()}
                     whileHover={{
                         scale: 1.1,

@@ -67,14 +67,14 @@ const AnimatedText = (props) => {
                     <motion.span
                       style={{ display: "inline-block", userSelect: "none" }}
                       variants={item}
-                      className='font-cinetype py-1 text-center text-2xl xs:text-3xl   md:text-[2.5em] lg:text-[3rem] xl:text-6xl 3xl:text-7xl z-10'
+                      className='font-cinetype py-1 text-center text-2xl xs:text-3xl   md:text-[2.5em] lg:text-[2.6rem] xl:text-6xl 3xl:text-7xl z-10'
                     >
                       {element}
                     </motion.span> :
                     <motion.span
                       style={{ display: "inline-block", userSelect: "none" }}
                       variants={item}
-                      className='m-0 flex justify-center items-center  p-0 font-cinetype py-1 text-4xl  xs:text-5xl md:text-6xl mt-2 xl:text-7xl z-10'
+                      className='m-0 flex justify-center items-center  p-0 font-cinetype py-1 text-4xl  xs:text-5xl  md:text-6xl lg:text-[3.5rem] mt-2 xl:text-7xl z-10'
                     >
                       {element}
                     </motion.span>

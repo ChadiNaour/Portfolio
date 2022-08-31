@@ -124,7 +124,7 @@ export default function Home() {
               }}>
                 <RoundedButton
                   whileHover={{
-                    backgroundColor: "black",
+                    backgroundColor: "#0A0C11",
                     border: "1rem",
                     color: "white",
                     transition: "linear",

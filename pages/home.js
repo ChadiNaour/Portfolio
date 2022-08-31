@@ -14,9 +14,9 @@ import HomeSection from '../components/Home/HomeSection';
 import ProjectsSection from '../components/Projects/Projects';
 import { useInView } from 'react-intersection-observer';
 import { useRouter } from 'next/router'
+import { withRouter } from 'next/router'
 
 const Home = () => {
-  const homeRef = useRef();
   const aboutRef = useRef();
   const router = useRouter();
  console.log(router);
@@ -35,7 +35,7 @@ const Home = () => {
         <HeaderSection music={router.query.music}/>
         <FullPageSections  >
           <FullpageSection className="h-screen" >
-            <HomeSection ref={homeRef} resultRef={aboutRef} />
+            <HomeSection resultRef={aboutRef} />
           </FullpageSection>
           <FullpageSection className="h-screen" >
             <AboutSection ref={aboutRef} />

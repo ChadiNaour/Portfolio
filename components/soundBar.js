@@ -30,13 +30,13 @@ position:fixed;
 
 const play = keyframes`
 0%{
-    transform:scaleY(0.8);
+    transform:scaleY(0.7);
 }
 50%{
-    transform:scaleY(1.3);
+    transform:scaleY(1);
 }
 100%{
-    transform:scaleY(0.8);
+    transform:scaleY(0.7);
 }
 `
 const Line = styled.span`
@@ -55,7 +55,9 @@ margin:0 0.11rem;
 `
 
 const SoundBar = ({ music }) => {
-    const [click, setClick] = useState(music !== "0" ? true : false);
+    const muusic = music !== "0" ? true : false;
+    console.log("in soundber",muusic, music)
+    const [click, setClick] = useState(muusic);
     const ref = useRef(null);
 
     const handleClick = () => {

@@ -123,3 +123,8 @@
 .btn2.btnCircle2:hover {
             color: black;
 }
+
+.AboveText {
+            -webkit-text-fill-color: transparent;
+            -webkit-text-stroke: 0.7px white;
+}
