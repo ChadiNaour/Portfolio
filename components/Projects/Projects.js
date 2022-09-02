@@ -145,7 +145,7 @@ const ProjectsSection = ({ }) => {
                 <span>© 2022 Designed & Developed Nchadi</span>
             </div>
             {/* </motion.main> */}
-            <div ref={ref1} className="absolute h-28 md:h-30 z-20 flex justify-center items-start left-0 bottom-0 w-full text-lg select-none" >
+            <div ref={ref1} className="absolute h-28 md:h-34 z-20 flex justify-center items-start left-0 bottom-0 w-full text-lg select-none" >
                 <div className="h-12 w-96   flex justify-start items-start">
                     <div className=" h-full z-10 w-2/5 bg-dark"></div>
                     <div className='flex flex-col  justify-center gap-3 items-start  h-full w-1/5'>

@@ -54,10 +54,10 @@ margin:0 0.11rem;
 }
 `
 
-const SoundBar = ({ music }) => {
-    const muusic = music !== "0" ? true : false;
-    console.log("in soundber",muusic, music)
-    const [click, setClick] = useState(muusic);
+const SoundBar = ({ }) => {
+    // const muusic = music !== "0" ? true : false;
+    // console.log("in soundber",muusic, music)
+    const [click, setClick] = useState(false);
     const ref = useRef(null);
 
     const handleClick = () => {

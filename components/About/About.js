@@ -30,9 +30,9 @@ const AboutSection = forwardRef((props, AboutRef) => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      console.log("chosen", quotes[quoteId])
+      // console.log("chosen", quotes[quoteId])
       setDisplayedQuote(quotes[quoteId]);
-      console.log(quotes.length - 1)
+      // console.log(quotes.length - 1)
       if (quoteId < quotes.length - 1)
         setQuoteId(quoteId + 1);
       else
@@ -218,7 +218,7 @@ const AboutSection = forwardRef((props, AboutRef) => {
               <Image layout="fill" src={Memoji} className="hidden" />
             </div>
             {/* glass card */}
-            <div className='-mt-8 lg:-mt-9 xl:-mt-11 2xl:-mt-10 2xl:-mt-12 bg-white bg-opacity-20 backdrop-blur-sm rounded-sm drop-shadow-lg w-72 sm:w-80 xl:w-96 h-28 xl:h-36 2xl:h-40'>
+            <div className='-mt-8 lg:-mt-9 xl:-mt-11 2xl:-mt-12 2xl:-mt-12 bg-white bg-opacity-20 backdrop-blur-sm rounded-[0.25rem] drop-shadow-lg w-72 sm:w-80 xl:w-96 h-28 xl:h-36 2xl:h-40'>
               <div className='h-full w-full flex justify-center items-center relative'>
                 {/* quote svgs */}
                 <svg className="absolute top-2 left-2 opacity-20 w-6 xl:w-8" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -232,7 +232,7 @@ const AboutSection = forwardRef((props, AboutRef) => {
                   <span className='text-sm xl:text-lg 2xl:text-xl text-white font-cinetype mb-5 transition ease-in-out duration-300 select-none'>{displayedQuote.text}</span>
                 </div>
                 <div className='absolute bottom-0 right-0 w-1/2 h-10 flex items-center justify-end pr-[5%] pb-[3%]'>
-                  <span className="text-[0.6rem] xl:text-md text-white uppercase  transition ease-in-out duration-300 select-none">— {displayedQuote.author}</span>
+                  <span className="text-[0.6rem] xl:text-[0.8rem] text-white uppercase  transition ease-in-out duration-300 select-none">— {displayedQuote.author}</span>
                 </div>
               </div>
             </div>

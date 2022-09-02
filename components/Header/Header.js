@@ -4,8 +4,8 @@ import { motion, useAnimation, useTransform } from "framer-motion";
 import { Icon } from '@iconify/react';
 
 
-const HeaderSection = ({music}) => {
-    console.log("music in header" , music)
+const HeaderSection = ({}) => {
+    // console.log("music in header" , music)
 
     const scrolToTop = () => {
         window.scrollTo(0, 0, 'smooth')
@@ -15,7 +15,7 @@ const HeaderSection = ({music}) => {
             <div className="relative  mx-0 my-auto px-0 py-auto w-full  flex justify-center">
                 <span onClick={() => {scrolToTop()}} className='cursor-pointer font-reloadNormal text-2xl md:text-3xl xl:text-[2.2em] text-white  select-none mt-1'>NCHADI</span>
                 <div className="absolute top-0 left-0  ml-4 md:ml-8 lg:ml-10 flex justify-center h-full w-12 items-center">
-                    <SoundBar music={music}/>
+                    <SoundBar />
                 </div>
                 <div className="absolute flex flex-row flex justify-center h-full items-center  top-0 right-0 w-auto mr-4 md:mr-8 lg:mr-10 ">
                     {/* right */}
