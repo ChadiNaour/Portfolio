@@ -17,9 +17,14 @@ import { useRouter } from 'next/router'
 import { withRouter } from 'next/router'
 
 const Home = () => {
-  const aboutRef = useRef();
   const router = useRouter();
-//  console.log(router);
+  const muusic = parseInt(router.query.music, 10)
+  console.log("music",muusic);
+  const aboutRef = useRef();
+
+  useEffect(() => {
+     console.log(router);
+  },[])
 
   return (
     <>
@@ -32,7 +37,7 @@ const Home = () => {
         <link rel="icon" href="/Icon.png" />
       </Head>
       <Fullpage >
-        <HeaderSection music={router.query.music}/>
+        <HeaderSection muusic={muusic}/>
         <FullPageSections  >
           <FullpageSection className="h-screen" >
             <HomeSection resultRef={aboutRef} />

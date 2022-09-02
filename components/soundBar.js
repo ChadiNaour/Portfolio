@@ -54,27 +54,32 @@ margin:0 0.11rem;
 }
 `
 
-const SoundBar = ({ }) => {
+const SoundBar = ({muusic}) => {
     // const muusic = music !== "0" ? true : false;
-    // console.log("in soundber",muusic, music)
-    const [click, setClick] = useState(false);
+    console.log("in soundber",muusic);
+    const [musicOn, setMusicOn] = useState(muusic ? true : false);
     const ref = useRef(null);
 
-    const handleClick = () => {
-        setClick(!click);
-        if (!click) {
+    useEffect(() => {
+        // console.log()
+        if (musicOn) {
             ref.current.play();
         } else {
             ref.current.pause();
         }
+    },[musicOn])
+
+    const handleClick = () => {
+        console.log("access to click")
+        setMusicOn(!musicOn);
     }
     return (
         <Box onClick={() => handleClick()}>
-            <Line click={click} />
-            <Line click={click} />
-            <Line click={click} />
-            <Line click={click} />
-            <Line click={click} />
+            <Line click={musicOn} />
+            <Line click={musicOn} />
+            <Line click={musicOn} />
+            <Line click={musicOn} />
+            <Line click={musicOn} />
 
 
             <audio src={music} ref={ref} loop />
