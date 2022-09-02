@@ -19,7 +19,7 @@ import { withRouter } from 'next/router'
 const Home = () => {
   const aboutRef = useRef();
   const router = useRouter();
- console.log(router);
+//  console.log(router);
 
   return (
     <>

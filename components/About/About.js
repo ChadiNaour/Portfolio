@@ -152,8 +152,8 @@ const AboutSection = forwardRef((props, AboutRef) => {
         {/* left container */}
         <div className='p-4 md:pr-8 flex  flex-col  w-full lg:w-2/3'>
           <div className="w-full h-full relative flex flex-col items-center lg:items-start justify-center ">
-            <div className={`font-cinetype text-[1.6rem] md:text-3xl xl:text-4xl 2xl:text-[2.5rem] md:mb-2 xl:mb-2 ${AboutStyles.AboveText} select-none`} >HI THERE</div>
-            <div className='font-cinetype text-center lg:text-left text-lg sm:text-2xl xl:text-3xl 2xl:text-[2.05rem]  text-white leading-normal md:text-[1.3rem] md:leading-wider lg:leading-tight xl:leading-tight 2xl:leading-normal tracking-tight md:tracking-normal lg:tracking-wide mb-3 xl:mb-6 select-none'>I'm a passionate and creative Front-end web developer, I specialize in designing and developing clean, functional and interactive user experiences, I'm quietly confident, fast learner, and perpetually working on improving myself.</div>
+            <div className={`font-cinetype text-[1.6rem] md:text-3xl xl:text-4xl 2xl:text-[2.5rem] 3xl:text-[3.2rem] md:mb-2 xl:mb-2 ${AboutStyles.AboveText} select-none`} >HI THERE</div>
+            <div className='font-cinetype text-center lg:text-left text-lg sm:text-2xl xl:text-3xl 2xl:text-[2.05rem] 3xl:text-[2.5rem]  text-white leading-normal md:text-[1.3rem] md:leading-wider lg:leading-tight xl:leading-tight 2xl:leading-normal tracking-tight md:tracking-normal lg:tracking-wide mb-3 xl:mb-6 select-none'>I'm a passionate and creative Front-end web developer, I specialize in designing and developing clean, functional and interactive user experiences, I'm quietly confident, fast learner, and perpetually working on improving myself.</div>
             {/* main stack responsive */}
             <button onClick={(e) => {
               e.preventDefault();
@@ -161,28 +161,28 @@ const AboutSection = forwardRef((props, AboutRef) => {
             }} className='md:hidden hover:text-graye w-full text-center text-white font-cinetype underline mb-3 cursor-pointer'>See my Main Stack</button>
             {/* main stack */}
             <div className='hidden md:flex md:w-full md:pr-8 mb-4 xl:mb-8'>
-              <div className='w-full flex justify-between h-16 xl:px-8 xl:h-20 px-[5%]  bg-gradient-to-b from-[#312E2E] to-[#403D3D] rounded-sm items-center shadow-md'>
-                <div className='flex justify-center items-center   h-full'><span className='text-white font-cinetype text-sm md:text-[1.1rem] xl:text-xl 2xl:text-[1.4rem] select-none'>Main Stack</span></div>
+              <div className='w-full flex justify-between h-16 xl:px-8 3xl:px-20 xl:h-20 3xl:h-28 px-[5%]  bg-gradient-to-b from-[#312E2E] to-[#403D3D] rounded-sm items-center shadow-md'>
+                <div className='flex justify-center items-center   h-full'><span className='text-white font-cinetype text-sm md:text-[1.1rem] xl:text-xl 2xl:text-[1.4rem] 3xl:text-[2rem] select-none'>Main Stack</span></div>
                 <div className='relative flex flex-row max-w-[80%] gap-3 2xl:gap-6 overflow-visible '>
                   {
                     MainStack.map((stack, index) => (
                       stack.name == "Javascript" || stack.name == "Typescript" ?
-                        <div key={index} className='relative z-50 cursor-pointer flex justify-end items-center group h-12 w-12 xl:h-16 xl:w-16 rounded-md bg-[#403D3D] flex justify-center items-center  w-20'>
+                        <div key={index} className='relative z-50 cursor-pointer flex justify-end items-center group h-12 w-12 xl:h-16 xl:w-16 3xl:w-20 3xl:h-20 rounded-md bg-[#403D3D] flex justify-center items-center  w-20'>
                           <Icon className="w-[75%] h-[75%] rounded-md" icon={stack.Icon} />
                           <span className="absolute z-50 inline-block font-cinetype scale-0 group-hover:scale-100 -top-10 py-2 px-3 text-sm font-medium text-white bg-[#212121] border-[1px] border-white rounded-lg shadow-sm duration-300 ">
                             {stack.name}
                           </span>
-                        </div> : stack.name == "NextJs" ? <div key={index} className='relative  z-50 cursor-pointer flex justify-end items-center group h-12 w-12 xl:h-16 xl:w-16 rounded-md bg-[#403D3D] flex justify-center items-center  w-20'>
+                        </div> : stack.name == "NextJs" ? <div key={index} className='relative  z-50 cursor-pointer flex justify-end items-center group h-12 w-12 xl:h-16 xl:w-16 3xl:w-20 3xl:h-20 rounded-md bg-[#403D3D] flex justify-center items-center  w-20'>
                           <Icon className=" w-[75%] h-[75%]" icon={stack.Icon} color="white" />
                           <span className="absolute z-50 inline-block font-cinetype scale-0 group-hover:scale-100 -top-10 py-2 px-3 text-sm font-medium text-white bg-[#212121] border-[1px] border-white rounded-lg shadow-sm duration-300 ">
                             {stack.name}
                           </span>
-                        </div> : stack.name == "Git/Github" ? <div key={index} className='relative cursor-pointer  z-50 flex justify-end items-center group h-12 w-12 xl:h-16 xl:w-16 rounded-md bg-[#403D3D] flex justify-center items-center  w-20'>
+                        </div> : stack.name == "Git/Github" ? <div key={index} className='relative cursor-pointer  z-50 flex justify-end items-center group h-12 w-12 xl:h-16 xl:w-16 3xl:w-20 3xl:h-20 rounded-md bg-[#403D3D] flex justify-center items-center  w-20'>
                           <Icon className=" w-[75%] h-[75%]" color="white" icon={stack.Icon} />
                           <span className="absolute z-50 inline-block font-cinetype scale-0 group-hover:scale-100 -top-10 py-2 px-3 text-sm font-medium text-white bg-[#212121] border-[1px] border-white rounded-lg shadow-sm duration-300 ">
                             {stack.name}
                           </span>
-                        </div> :  <div key={index} className='relative cursor-pointer  z-50 flex justify-end items-center group h-12 w-12 xl:h-16 xl:w-16 rounded-md bg-[#403D3D] flex justify-center items-center  w-20'>
+                        </div> :  <div key={index} className='relative cursor-pointer  z-50 flex justify-end items-center group h-12 w-12 xl:h-16 xl:w-16 3xl:w-20 3xl:h-20 rounded-md bg-[#403D3D] flex justify-center items-center  w-20'>
                           <Icon className=" w-[75%] h-[75%]" icon={stack.Icon} />
                           <span className="absolute z-50 inline-block font-cinetype scale-0 group-hover:scale-100 -top-10 py-2 px-3 text-sm font-medium text-white bg-[#212121] border-[1px] border-white rounded-lg shadow-sm duration-300 ">
                             {stack.name}
@@ -214,11 +214,11 @@ const AboutSection = forwardRef((props, AboutRef) => {
         <div className=" lg:flex lg:flex-col lg:mt-0 lg:justify-center lg:items-center lg:h-full md:w-full lg:w-1/3 ">
           <div className='flex flex-col justify-center items-center relative h-auto w-full '>
             {/* emoji div */}
-            <div className="select-none -mt-8 lg:-mt-16 2xl:-mt-24 relative w-72 h-72 md:w-[21rem] md:h-[21.5rem] xl:w-[430px] xl:h-[440px]  2xl:w-[470px] 2xl:h-[480px] ">
+            <div className="select-none -mt-8 lg:-mt-16 2xl:-mt-24 relative w-72 h-72 md:w-[21rem] md:h-[21.5rem] xl:w-[430px] xl:h-[440px]  2xl:w-[470px] 2xl:h-[480px] 3xl:w-[570px] 3xl:h-[580px] ">
               <Image layout="fill" src={Memoji} className="hidden" />
             </div>
             {/* glass card */}
-            <div className='-mt-8 lg:-mt-9 xl:-mt-11 2xl:-mt-12 2xl:-mt-12 bg-white bg-opacity-20 backdrop-blur-sm rounded-[0.25rem] drop-shadow-lg w-72 sm:w-80 xl:w-96 h-28 xl:h-36 2xl:h-40'>
+            <div className='-mt-8 lg:-mt-9 xl:-mt-11 2xl:-mt-12 3xl:-mt-14 bg-white bg-opacity-20 backdrop-blur-sm rounded-[0.25rem] drop-shadow-lg w-72 sm:w-80 xl:w-96 h-28 xl:h-36 2xl:h-40 3xl:h-52 3xl:w-[500px]'>
               <div className='h-full w-full flex justify-center items-center relative'>
                 {/* quote svgs */}
                 <svg className="absolute top-2 left-2 opacity-20 w-6 xl:w-8" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -229,10 +229,10 @@ const AboutSection = forwardRef((props, AboutRef) => {
                 </svg>
                 {/* quote data */}
                 <div className="absolute flex justify-center items-center mt-3  md:mt-4 xl:mt-2 w-full px-8  transition ease-in-out">
-                  <span className='text-sm xl:text-lg 2xl:text-xl text-white font-cinetype mb-5 transition ease-in-out duration-300 select-none'>{displayedQuote.text}</span>
+                  <span className='text-sm xl:text-lg 2xl:text-xl 3xl:text-2xl text-white font-cinetype mb-5 transition ease-in-out duration-300 select-none'>{displayedQuote.text}</span>
                 </div>
                 <div className='absolute bottom-0 right-0 w-1/2 h-10 flex items-center justify-end pr-[5%] pb-[3%]'>
-                  <span className="text-[0.6rem] xl:text-[0.8rem] text-white uppercase  transition ease-in-out duration-300 select-none">— {displayedQuote.author}</span>
+                  <span className="text-[0.6rem] xl:text-[0.8rem] 3xl:text-[1rem] text-white uppercase  transition ease-in-out duration-300 select-none">— {displayedQuote.author}</span>
                 </div>
               </div>
             </div>
