@@ -30,6 +30,32 @@ body::-webkit-scrollbar {
   animation: shake 2.5s linear forwards;
 }
 
+/* @media screen and (min-width: 80px) {
+  .blackMirror {
+    font-size: 100px;
+  }
+} */
+
+@media screen and (min-width: 1000px) {
+  .blackMirror {
+    font-size: 80px;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .blackMirror {
+    font-size: 100px;
+  }
+}
+
+/* @media (max-width: 768px) {
+  .blackMirror {
+    font-size: calc(25px + 7vw);
+    font-weight: 500;
+    color: red;
+  }
+} */
+
 .blackMirror span {
   position: absolute;
   top: 0;
