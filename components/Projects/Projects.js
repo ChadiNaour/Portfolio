@@ -110,7 +110,7 @@ const ProjectsSection = ({ }) => {
                 {Projects.map((project, index) => (
                     <SwiperSlide key={index}>
                         <div className={`w-screen h-full flex justify-center z-20 items-center`}>
-                            <div className='w-[90%] xs:w-[22rem] h-[38rem] md:w-[90vw] lg:w-3/4 xl:w-3/5 md:h-[27rem] lg:h-[27rem] xl:h-[27rem] 2xl:h-[30rem] 3xl:w-1/2 3xl:h-[49rem] z-20 rounded-md md:rounded-sm relative flex flex-col items-center shadow-2xl bg-[#2B2B2B]' key={index}>
+                            <div className='w-[90%] xs:w-[22rem] h-[34rem] md:w-[90vw] lg:w-3/4 xl:w-3/5 md:h-[27rem] lg:h-[27rem] xl:h-[27rem] 2xl:h-[30rem] 3xl:w-1/2 3xl:h-[49rem] z-20 rounded-md md:rounded-sm relative flex flex-col items-center shadow-2xl bg-[#2B2B2B]' key={index}>
                                 <div className="relative h-[10%] md:h-1/6 w-full">
                                     <div className="absolute top-0 right-0 mt-7 mr-4 md:mr-7 xl:mr-10"><span className='text-white text-xl xl:text-2xl font-reloadLight'>{index + 1} / 5</span></div>
                                 </div>
@@ -161,7 +161,7 @@ const ProjectsSection = ({ }) => {
                 <span>© 2022 Designed & Developed Nchadi</span>
             </div>
             {/* </motion.main> */}
-            <div ref={ref1} className="absolute h-24 md:h-34 z-20 flex justify-center items-start left-0 bottom-0 w-full text-lg select-none" >
+            <div ref={ref1} className="absolute h-24 md:h-32 z-20 flex justify-center items-start left-0 bottom-0 w-full text-lg select-none" >
                 <div className="h-12 w-96   flex justify-start items-start">
                     <div className=" h-full z-10 w-2/5 bg-dark"></div>
                     <div className='flex flex-col  justify-center gap-3 items-start  h-full w-1/5'>

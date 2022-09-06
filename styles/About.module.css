@@ -63,7 +63,7 @@
 
 .btn2 {
             position: relative;
-            background: transparent;
+            background: #0a0c11;
             border: 1px solid white;
             color: white;
             /* height: 3.5em;
@@ -115,7 +115,7 @@
 .btn2.btnCircle2 {
             z-index: 1;
             overflow: hidden;
-            background-color: transparent;
+            background-color: #0a0c11;
             border: 1px solid white;
             transition: color 500ms ease-in-out;
 }

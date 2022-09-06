@@ -1,8 +1,9 @@
-import React, { useRef, useState, forwardRef } from 'react';
+import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import AnimatedText from './AnimatedText';
-import { motion, useAnimation, useTransform } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
 import { Icon } from '@iconify/react';
+import { useInView } from 'react-intersection-observer';
 
 const RoundedButton = styled(motion.div)`
     background-color: #0a0c11;
@@ -40,7 +41,11 @@ const RoundedButton = styled(motion.div)`
     }
 `
 
-const HomeSection = ({resultRef}) => {
+const HomeSection = ({ resultRef }) => {
+
+    const animation2 = useAnimation();
+    const animation3 = useAnimation();
+    const [ref1, inView1] = useInView({ threshold: 1 });
 
 
     const placeholderText = [
@@ -66,6 +71,45 @@ const HomeSection = ({resultRef}) => {
         })
     }
 
+    const typeVariants = {
+        hidden: {
+            opacity: 0,
+        },
+        visible: {
+            opacity: 1,
+            transition: {
+                opacity: { ease: "linear" },
+                delay: 0.2,
+                duration: 0.5
+            }
+        }
+    }
+    const lineVariants = {
+        hidden: {
+            height: 0,
+        },
+        visible: {
+            height: "60vh",
+            transition: {
+                opacity: { ease: "linear" },
+                delay: 0.6,
+                duration: 1
+            }
+        }
+    }
+
+    useEffect(() => {
+        if (inView1) {
+            animation2.start("visible");
+            animation3.start("visible");
+            return () => { animation2.stop; animation3.stop }
+        }
+        if (!inView1) {
+            animation2.start("hidden");
+            animation3.start("hidden");
+        }
+    }, [inView1, animation2])
+
     // Framer Motion variant object, for controlling animation
     const item = {
         hidden: {
@@ -83,27 +127,16 @@ const HomeSection = ({resultRef}) => {
     return (
         <motion.section className="h-full relative flex z-10  w-full flex flex-col justify-center items-center overflow-hidden ">
             <div className='hidden lg:flex'>
-                <motion.div initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{
-                        opacity: { ease: "linear" },
-                        delay: 1,
-                        duration: 1
-                    }}
+                <motion.div animate={animation2} initial="hidden" variants={typeVariants}
                     className="absolute  flex justify-center items-end   top-0 left-0 ml-6 md:ml-8 lg:ml-10 h-1/4 3xl:h-1/5">
-                    <div className='hidden  sm:block absolute font-reloadLight  text-white text-md pl-6 md:pl-6 z-10 pt-4 -rotate-90' style={{ userSelect: "none" }}>home</div>
+                    <div className='hidden  sm:block absolute font-reloadLight  text-white text-md pl-6 md:pl-6 z-10 pt-4 -rotate-90' style={{ userSelect: "none" }}>Home</div>
                 </motion.div>
-                <motion.div initial={{ height: 0 }}
-                    animate={{ height: "60vh" }}
-                    transition={{
-                        opacity: { ease: "linear" },
-                        delay: 1,
-                        duration: 1
-                    }} className="hidden sm:block  absolute z-10 top-1/4 3xl:top-[20%] left-0  w-10  bottom-10 ml-7 md:ml-8 lg:ml-10 border-l-[1px] border-white">
+                <motion.div animate={animation3} initial="hidden" variants={lineVariants}
+                    className="hidden sm:block  absolute z-10 top-1/4 3xl:top-[20%] left-0  w-10  bottom-10 ml-7 md:ml-8 lg:ml-10 border-l-[1px] border-white">
                 </motion.div>
             </div>
-
             <motion.div
+                ref={ref1}
                 initial="hidden"
                 animate="visible"
                 variants={container}
